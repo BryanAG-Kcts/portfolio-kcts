@@ -1,6 +1,7 @@
 import { RouterLangsProps, getLocale } from '@/locales/constants'
 import { AnimationIcon } from '@/shared/components/AnimationIcon/animationIcon'
 import './hero.css'
+import './backgroundAnimation.css'
 
 export const Hero = ({ params }: RouterLangsProps): JSX.Element => {
   const { heroName, paragraph, title } = getLocale(params.lang).hero
