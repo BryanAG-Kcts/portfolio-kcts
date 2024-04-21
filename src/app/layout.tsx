@@ -1,0 +1,34 @@
+import type { Metadata } from 'next'
+import { Quicksand } from 'next/font/google'
+import './globals.css'
+import { ReactNode } from 'react'
+
+const quickSand = Quicksand({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
+  title: 'Kactuswow | Desarrollador en Ocaña',
+  description: 'Hola👋, soy Bryan Alvarez, desarrollador web en Ocaña. Sígueme en mi GitHub, convirtamos ideas a código',
+  authors: [
+    {
+      name: 'Bryan David Alvarez',
+      url: 'https://github.com/BryanAG-Kcts'
+    }
+  ],
+  keywords: ['portafolio', 'portfolio', 'Bryan Alvarez', 'kactus', 'BryanAG-Kcts', 'BryanAG', 'Kcts', 'Kactuswow', 'desarrollador', 'desarrollador Web', 'ocaña', 'github', 'developer', 'web developer']
+
+}
+
+export default function RootLayout ({
+  children
+}: Readonly<{
+  children: ReactNode
+}>): JSX.Element {
+  return (
+    <html lang='es' suppressHydrationWarning>
+      <head>
+        <meta property='title' content='Portafolio Kcts' />
+      </head>
+      <body suppressHydrationWarning className={quickSand.className}>{children}</body>
+    </html>
+  )
+}
