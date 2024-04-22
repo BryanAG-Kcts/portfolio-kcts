@@ -3,73 +3,84 @@ export const technologyImagePath = '/images/technologies/'
 export const technologies = {
   html5: {
     publicName: 'HTML 5',
-    name: 'html5'
+    name: 'html5',
+    icon: technologyImagePath + 'html5.svg'
   },
   css3: {
     publicName: 'CSS 3',
-    name: 'css3'
+    name: 'css3',
+    icon: technologyImagePath + 'css3.svg'
   },
   javascript: {
     publicName: 'JavaScript',
-    name: 'javascript'
+    name: 'javascript',
+    icon: technologyImagePath + 'javascript.svg'
   },
   reactjs: {
     publicName: 'React',
-    name: 'reactjs'
+    name: 'reactjs',
+    icon: technologyImagePath + 'reactjs.svg'
   },
   nodejs: {
     publicName: 'Node.js',
-    name: 'nodejs'
+    name: 'nodejs',
+    icon: technologyImagePath + 'nodejs.svg'
   },
   expressjs: {
     publicName: 'Express.js',
-    name: 'expressjs'
+    name: 'expressjs',
+    icon: technologyImagePath + 'expressjs.svg'
   },
   java: {
     publicName: 'Java',
-    name: 'java'
+    name: 'java',
+    icon: technologyImagePath + 'java.svg'
   },
   tailwindcss: {
     publicName: 'Tailwind CSS',
-    name: 'tailwindcss'
+    name: 'tailwindcss',
+    icon: technologyImagePath + 'tailwindcss.svg'
   },
   git: {
     publicName: 'Git',
-    name: 'git'
+    name: 'git',
+    icon: technologyImagePath + 'git.svg'
   },
   github: {
     publicName: 'GitHub',
-    name: 'github'
+    name: 'github',
+    icon: technologyImagePath + 'github.svg'
   },
   typescript: {
     publicName: 'TypeScript',
-    name: 'typescript'
+    name: 'typescript',
+    icon: technologyImagePath + 'typescript.svg'
   },
   postgresql: {
     publicName: 'PostgreSQL',
-    name: 'postgresql'
+    name: 'postgresql',
+    icon: technologyImagePath + 'postgresql.svg'
   },
   nextjs: {
     publicName: 'Next.js',
-    name: 'nextjs'
+    name: 'nextjs',
+    icon: technologyImagePath + 'nextjs.svg'
   },
   threejs: {
     publicName: 'Three.js',
-    name: 'threejs'
+    name: 'threejs',
+    icon: technologyImagePath + 'threejs.svg'
   },
   angular: {
     publicName: 'Angular',
-    name: 'angular'
+    name: 'angular',
+    icon: technologyImagePath + 'angular.svg'
   },
   springboot: {
     publicName: 'Spring Boot',
-    name: 'springboot'
+    name: 'springboot',
+    icon: technologyImagePath + 'springboot.svg'
   }
-}
+} as const
 
-export const technologiesEntities = Object.values(technologies).map(
-  (technology) => ({
-    ...technology,
-    icon: technologyImagePath + technology.name + '.svg'
-  })
-)
+export const technologiesEntities = Object.values(technologies)

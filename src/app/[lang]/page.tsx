@@ -3,6 +3,7 @@ import { Hero } from './components/hero/hero'
 import { Experience } from './components/experience/experience'
 import { Skills } from './components/skills/skills'
 import { Information } from './components/information/information'
+import { BackendProjects } from './components/backendProject/backendProjects'
 
 interface Props {
   params: {
@@ -22,6 +23,7 @@ export default function Page ({ params }: Props): JSX.Element {
             <Skills params={params} />
             <Information params={params} />
           </aside>
+          <BackendProjects params={params} />
         </div>
 
       </section>

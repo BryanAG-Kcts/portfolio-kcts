@@ -3,6 +3,7 @@ import { head } from './head'
 import { hero } from './hero'
 import { indie } from './indie'
 import { information } from './information'
+import { projects } from './project'
 import { skills } from './skills'
 const main = {
   head,
@@ -10,7 +11,8 @@ const main = {
   experience,
   skills,
   information,
-  indie
+  indie,
+  projects
 }
 
 export default main
