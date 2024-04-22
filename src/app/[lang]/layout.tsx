@@ -1,4 +1,5 @@
-import { Languages, getLocale } from '@/locales/constants'
+import { Languages } from '@/locales/constants'
+import { getLocale } from '@/locales/main'
 import { Metadata } from 'next'
 
 interface Props {

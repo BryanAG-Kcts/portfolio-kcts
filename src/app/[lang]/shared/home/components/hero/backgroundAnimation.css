@@ -1,6 +1,7 @@
 #heroContent {
   background: url('/images/herobg.svg');
   background-size: cover;
+  background-repeat: no-repeat;
   animation: backGroundMove infinite linear 20s;
   -webkit-animation: backGroundMove infinite linear 20s;
 }

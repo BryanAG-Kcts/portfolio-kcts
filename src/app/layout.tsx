@@ -1,7 +1,12 @@
 import type { Metadata } from 'next'
 import { Quicksand } from 'next/font/google'
-import './globals.css'
 import { ReactNode } from 'react'
+import './globals.css'
+import './styles/colors.css'
+import './styles/darkMode.css'
+import './styles/scroll.css'
+import './styles/utilities.css'
+import './styles/pulseHover.css'
 
 const quickSand = Quicksand({ subsets: ['latin'] })
 
