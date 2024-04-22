@@ -1,4 +1,4 @@
-import { RouterLangsProps } from '@/locales/constants'
+import { RouterLangsProps } from '@/locales/constants/constants'
 import { getLocale } from '@/locales/main'
 import { TitleGenerator } from '@/shared/components/titleGenerator/titleGenerator'
 import { WorkExperiences } from '@/shared/components/workExperience/workExperiences'

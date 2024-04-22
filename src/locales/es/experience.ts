@@ -1,4 +1,4 @@
-import { nowadays } from '../constants'
+import { nowadays } from '../constants/constants'
 
 export const experience = {
   title: 'Experiencia laboral',
