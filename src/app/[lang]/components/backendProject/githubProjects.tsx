@@ -8,7 +8,7 @@ export const GithubProjects = ({ githubProjects }: Props): JSX.Element => {
   return (
     <section className='flex flex-wrap justify-center w-full gap-3'>
       {
-        githubProjects.map(githubProject => githubProject.type === projectTypes.backend && <GithubProject key={githubProject.key} githubProject={githubProject} />)
+        githubProjects.map(githubProject => githubProject.type !== projectTypes.frontend && <GithubProject key={githubProject.key} githubProject={githubProject} />)
       }
     </section>
   )

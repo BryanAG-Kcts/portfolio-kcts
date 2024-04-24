@@ -7,6 +7,7 @@ import './styles/darkMode.css'
 import './styles/scroll.css'
 import './styles/utilities.css'
 import './styles/pulseHover.css'
+import './styles/backgroundAnimation.css'
 
 const quickSand = Quicksand({ subsets: ['latin'] })
 
@@ -34,7 +35,7 @@ export default function RootLayout ({
         <meta property='title' content='Portafolio Kcts' />
       </head>
       <body suppressHydrationWarning className={quickSand.className}>{children}</body>
-      {/* <span className='precharge text-dk-color-gray-100 bg-dk-color-gray-100 text-lt-color-yellow-100 text-dk-color-blue-100 bg-lt-color-green-100 bg-lt-color-green-200 bg-lt-color-yellow-100 bg-dk-color-blue-100 bg-black text-black' /> */}
+
     </html>
   )
 }

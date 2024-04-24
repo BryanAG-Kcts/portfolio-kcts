@@ -36,8 +36,8 @@ const { backend, frontend, fullStack } = projectTypes
 export const projectsBody: Record<string, Project> = {
   portfolio: {
     name: 'Kactuswow',
-    technology: typescript.name,
-    color: typescript.name,
+    technology: nextjs.publicName,
+    color: nextjs.name,
     linkGitHub: linksGitHub.portfolio,
     key: 'portfolio',
     type: backend,
@@ -45,7 +45,7 @@ export const projectsBody: Record<string, Project> = {
   },
   sittingnt: {
     name: "Sittingn't",
-    technology: css3.name,
+    technology: css3.publicName,
     color: css3.name,
     linkGitHub: linksGitHub.sittingnt,
     key: 'sittingnt',
@@ -54,8 +54,8 @@ export const projectsBody: Record<string, Project> = {
   },
   kctsground: {
     name: 'Kctsground',
-    technology: typescript.name,
-    color: typescript.name,
+    technology: nextjs.publicName,
+    color: nextjs.name,
     linkGitHub: linksGitHub.kctsground,
     key: 'kctsground',
     type: frontend,
@@ -66,7 +66,7 @@ export const projectsBody: Record<string, Project> = {
   },
   landing: {
     name: 'Landing 3D',
-    technology: threejs.name,
+    technology: threejs.publicName,
     color: threejs.name,
     linkGitHub: linksGitHub.landing,
     key: 'landing',
@@ -78,7 +78,7 @@ export const projectsBody: Record<string, Project> = {
   },
   kctshort: {
     name: 'Kctshort',
-    technology: nextjs.name,
+    technology: nextjs.publicName,
     color: nextjs.name,
     linkGitHub: linksGitHub.kctshort,
     linkWeb: linksWeb.kctshort,
@@ -90,8 +90,8 @@ export const projectsBody: Record<string, Project> = {
   },
   game2048: {
     name: '2048',
-    technology: typescript.name,
-    color: typescript.name,
+    technology: reactjs.publicName,
+    color: reactjs.name,
     linkGitHub: linksGitHub.game2048,
     linkWeb: linksWeb.game2048,
     technologies: [css3, reactjs, typescript, postgresql, expressjs, nodejs],
@@ -102,8 +102,8 @@ export const projectsBody: Record<string, Project> = {
   },
   simpleTranslate: {
     name: 'SimpleTranslate',
-    technology: typescript.name,
-    color: typescript.name,
+    technology: reactjs.publicName,
+    color: reactjs.name,
     linkGitHub: linksGitHub.simpleTranslate,
     linkWeb: linksWeb.simpleTranslate,
     technologies: [css3, reactjs, typescript, tailwindcss],
@@ -114,8 +114,8 @@ export const projectsBody: Record<string, Project> = {
   },
   infoCountry: {
     name: 'InfoCountry',
-    technology: typescript.name,
-    color: typescript.name,
+    technology: reactjs.publicName,
+    color: reactjs.name,
     linkGitHub: linksGitHub.infoCountry,
     linkWeb: linksWeb.infoCountry,
     technologies: [css3, reactjs, typescript, tailwindcss],
@@ -126,11 +126,11 @@ export const projectsBody: Record<string, Project> = {
   },
   kactusKraft: {
     name: 'KactusKraft',
-    technology: javascript.name,
-    color: javascript.name,
+    technology: threejs.publicName,
+    color: threejs.name,
     linkGitHub: linksGitHub.kactusKraft,
     linkWeb: linksWeb.kactusKraft,
-    technologies: [css3, reactjs, javascript, html5],
+    technologies: [css3, reactjs, javascript, html5, threejs],
     key: 'kactusKraft',
     type: frontend,
     preview: `${projectImagePath}kactusKraft.webp`,
@@ -138,8 +138,8 @@ export const projectsBody: Record<string, Project> = {
   },
   tsDo: {
     name: 'Ts Do',
-    technology: typescript.name,
-    color: typescript.name,
+    technology: reactjs.publicName,
+    color: reactjs.name,
     linkGitHub: linksGitHub.tsDo,
     linkWeb: linksWeb.tsDo,
     technologies: [css3, reactjs, typescript, tailwindcss],
@@ -150,7 +150,7 @@ export const projectsBody: Record<string, Project> = {
   },
   button: {
     name: 'The button',
-    technology: javascript.name,
+    technology: javascript.publicName,
     color: javascript.name,
     linkGitHub: linksGitHub.button,
     linkWeb: linksWeb.button,
@@ -162,7 +162,7 @@ export const projectsBody: Record<string, Project> = {
   },
   wapiw: {
     name: 'WapiW',
-    technology: javascript.name,
+    technology: javascript.publicName,
     color: javascript.name,
     linkGitHub: linksGitHub.wapiw,
     key: 'wapiw',
@@ -171,8 +171,8 @@ export const projectsBody: Record<string, Project> = {
   },
   tictactoe: {
     name: 'TicTacToe',
-    technology: javascript.name,
-    color: javascript.name,
+    technology: reactjs.publicName,
+    color: reactjs.name,
     linkGitHub: linksGitHub.tictactoe,
     linkWeb: linksWeb.tictactoe,
     technologies: [css3, reactjs, javascript, tailwindcss],
@@ -183,7 +183,7 @@ export const projectsBody: Record<string, Project> = {
   },
   kctsExpressGenerator: {
     name: 'Kcts-Express-Generator',
-    technology: typescript.name,
+    technology: typescript.publicName,
     color: typescript.name,
     linkGitHub: linksGitHub.kctsExpressGenerator,
     key: 'kctsExpressGenerator',

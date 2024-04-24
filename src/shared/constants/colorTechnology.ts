@@ -1,6 +1,6 @@
 import { TechnologyNames } from '@/locales/main'
 
-export const tailwindColorsTechnologies: Record<TechnologyNames, string> = {
+export const tailwindColors: Record<TechnologyNames, string> = {
   typescript: 'dk-color-blue-100',
   javascript: 'lt-color-yellow-100',
   html5: 'dk-color-red-100',
@@ -20,4 +20,4 @@ export const tailwindColorsTechnologies: Record<TechnologyNames, string> = {
 }
 
 export const getColorTechnology = (technology: TechnologyNames): string =>
-  tailwindColorsTechnologies[technology]
+  tailwindColors[technology]

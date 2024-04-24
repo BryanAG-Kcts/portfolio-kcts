@@ -26,6 +26,8 @@ export default function Page ({ params }: Props): JSX.Element {
           <BackendProjects params={params} />
         </div>
 
+        {/* <span className='precharge text-dk-color-gray-100 bg-dk-color-gray-100 text-lt-color-yellow-100 text-dk-color-blue-100 bg-lt-color-green-100 bg-lt-color-green-200 bg-lt-color-yellow-100 bg-dk-color-blue-100 bg-black text-black text-lt-color-blue-100 bg-lt-color-blue-100' /> */}
+
       </section>
     </>
   )
