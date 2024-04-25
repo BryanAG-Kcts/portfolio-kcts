@@ -58,6 +58,3 @@
 .buttonGrow:hover > * {
   color: white;
 }
-.buttonGrow:hover {
-  border: 2px solid transparent;
-}

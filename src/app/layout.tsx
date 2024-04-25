@@ -35,7 +35,6 @@ export default function RootLayout ({
         <meta property='title' content='Portafolio Kcts' />
       </head>
       <body suppressHydrationWarning className={quickSand.className}>{children}</body>
-
     </html>
   )
 }

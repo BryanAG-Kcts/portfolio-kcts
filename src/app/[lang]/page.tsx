@@ -7,10 +7,12 @@ import { BackendProjects } from './components/backendProject/backendProjects'
 import { Gallery } from './components/frontendProject/gallery'
 import { About } from './components/about/about'
 import { Footer } from './components/footer/footer'
+import { Header } from './components/header/header'
 
 export default function Page ({ params }: RouterLangsProps): JSX.Element {
   return (
     <>
+      <Header params={params} />
       <Hero params={params} />
       <section id='mainContent' className='greatSection p-2 sectionContentDarkmode'>
         <Experience params={params} />
