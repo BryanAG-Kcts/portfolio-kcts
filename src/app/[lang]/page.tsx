@@ -1,4 +1,4 @@
-import { Languages } from '@/locales/constants/constants'
+import { RouterLangsProps } from '@/locales/constants/constants'
 import { Hero } from './components/hero/hero'
 import { Experience } from './components/experience/experience'
 import { Skills } from './components/skills/skills'
@@ -6,14 +6,9 @@ import { Information } from './components/information/information'
 import { BackendProjects } from './components/backendProject/backendProjects'
 import { Gallery } from './components/frontendProject/gallery'
 import { About } from './components/about/about'
+import { Footer } from './components/footer/footer'
 
-interface Props {
-  params: {
-    lang: Languages
-  }
-}
-
-export default function Page ({ params }: Props): JSX.Element {
+export default function Page ({ params }: RouterLangsProps): JSX.Element {
   return (
     <>
       <Hero params={params} />
@@ -34,6 +29,7 @@ export default function Page ({ params }: Props): JSX.Element {
         {/* <span className='precharge text-dk-color-gray-100 bg-dk-color-gray-100 text-lt-color-yellow-100 text-dk-color-blue-100 bg-lt-color-green-100 bg-lt-color-green-200 bg-lt-color-yellow-100 bg-dk-color-blue-100 bg-black text-black text-lt-color-blue-100 bg-lt-color-blue-100' /> */}
 
       </section>
+      <Footer />
     </>
   )
 }
