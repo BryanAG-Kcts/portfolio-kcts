@@ -1,3 +1,4 @@
+import { about, softSkill } from './about'
 import { experience } from './experience'
 import { head } from './head'
 import { hero } from './hero'
@@ -12,7 +13,9 @@ const main = {
   skills,
   information,
   indie,
-  projects
+  projects,
+  about,
+  softSkill
 }
 
 export default main
