@@ -4,6 +4,7 @@ import { Experience } from './components/experience/experience'
 import { Skills } from './components/skills/skills'
 import { Information } from './components/information/information'
 import { BackendProjects } from './components/backendProject/backendProjects'
+import { Gallery } from './components/frontendProject/gallery'
 
 interface Props {
   params: {
@@ -25,6 +26,8 @@ export default function Page ({ params }: Props): JSX.Element {
           </aside>
           <BackendProjects params={params} />
         </div>
+
+        <Gallery params={params} />
 
         {/* <span className='precharge text-dk-color-gray-100 bg-dk-color-gray-100 text-lt-color-yellow-100 text-dk-color-blue-100 bg-lt-color-green-100 bg-lt-color-green-200 bg-lt-color-yellow-100 bg-dk-color-blue-100 bg-black text-black text-lt-color-blue-100 bg-lt-color-blue-100' /> */}
 

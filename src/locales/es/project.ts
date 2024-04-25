@@ -29,6 +29,5 @@ export const projectsDesc = {
 export const projects = {
   nameGithub: 'Proyectos de GitHub',
   nameWeb: 'Proyectos Web',
-  anchorName: 'visitar',
   projects: getLocaleProject(projectsDesc)
 }
