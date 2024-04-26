@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Quicksand } from 'next/font/google'
 import { ReactNode } from 'react'
+import { TitleWindow } from '@/shared/components/titleWindow/titleWindow'
 import './globals.css'
 import './styles/colors.css'
 import './styles/darkMode.css'
@@ -34,7 +35,10 @@ export default function RootLayout ({
       <head>
         <meta property='title' content='Portafolio Kcts' />
       </head>
-      <body suppressHydrationWarning className={quickSand.className}>{children}</body>
+      <body suppressHydrationWarning className={quickSand.className}>
+        <TitleWindow />
+        {children}
+      </body>
     </html>
   )
 }

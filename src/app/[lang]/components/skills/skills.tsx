@@ -1,6 +1,6 @@
 import { RouterLangsProps } from '@/locales/constants/constants'
 import { getLocale } from '@/locales/main'
-import { Technologies } from '@/shared/components/technologies/Technologies'
+import { Technologies } from '@/shared/components/technologies/technologies'
 import { TitleGenerator } from '@/shared/components/titleGenerator/titleGenerator'
 
 export const Skills = ({ params }: RouterLangsProps): JSX.Element => {

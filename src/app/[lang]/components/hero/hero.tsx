@@ -7,7 +7,7 @@ export const Hero = ({ params }: RouterLangsProps): JSX.Element => {
   const { heroName, paragraph, title } = getLocale(params.lang).hero
 
   return (
-    <section id='heroContent' className='w-full flex-col flex items-center justify-center py-10 min-h-[50vh] md:min-h-[80vh] z-10 bgPolygonal relative'>
+    <section id='heroContent' className='w-full flex-col flex items-center justify-center py-10 min-h-[50vh] md:min-h-[80vh] z-10 bgPolygonal relative backGroundMove'>
       <div className='flex flex-col items-center gap-7 md:flex-row md:gap-0 md:w-[700px] md:justify-between lg:w-[900px]'>
 
         <div className='flex flex-col gap-4 px-3 text-center text-white md:text-left md:max-w-md'>

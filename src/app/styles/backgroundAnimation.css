@@ -5,7 +5,7 @@
 }
 
 @media (min-width: 768px) {
-  .bgPolygonal {
+  .backGroundMove {
     animation: backGroundMove infinite linear 20s;
     -webkit-animation: backGroundMove infinite linear 20s;
   }

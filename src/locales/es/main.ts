@@ -1,4 +1,5 @@
 import { about, softSkill } from './about'
+import { certificate } from './certificate'
 import { experience } from './experience'
 import { head } from './head'
 import { header } from './header'
@@ -17,7 +18,8 @@ const main = {
   indie,
   projects,
   about,
-  softSkill
+  softSkill,
+  certificate
 }
 
 export default main

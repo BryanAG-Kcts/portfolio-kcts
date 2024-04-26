@@ -2,7 +2,7 @@
 import { Project } from '@/locales/main'
 import { ButtonGrow } from '@/shared/components/buttonGrow/buttonGrow'
 import { PulsationCircle } from '@/shared/components/pulsationCircle/pulsationCircle'
-import { Technologies } from '@/shared/components/technologies/Technologies'
+import { Technologies } from '@/shared/components/technologies/technologies'
 import { getColorTechnology } from '@/shared/constants/colorTechnology'
 import Link from 'next/link'
 

@@ -16,10 +16,10 @@ export const Information = ({ params }: RouterLangsProps): JSX.Element => {
       <div className='w-full max-w-[500px] flex flex-col gap-5 px-5 py-3 bg-white rounded-2xl cardContentDarkmode'>
         <Infos information={information.information} />
         <ButtonGrow>
-          <Link href='/cv'>{indie.cvLink}</Link>
+          <Link href='/api/cv'>{indie.cvLink}</Link>
         </ButtonGrow>
         <ButtonGrow>
-          <Link href={`/certificate/langs/${params.lang}`}>{indie.certificateLink}</Link>
+          <Link href={`/${params.lang}/certificates`}>{indie.certificateLink}</Link>
         </ButtonGrow>
       </div>
     </section>

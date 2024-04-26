@@ -17,10 +17,10 @@ export const About = ({ params }: RouterLangsProps): JSX.Element => {
 
           <img draggable='false' decoding='async' loading='lazy' className='aspect-square object-cover rounded-lg max-w-sm w-full mx-auto' src='/images/meAbout.webp' alt='🌵' />
           <ButtonGrow>
-            <Link href='/cv'>{cvLink}</Link>
+            <Link href='/api/cv'>{cvLink}</Link>
           </ButtonGrow>
           <ButtonGrow>
-            <Link href={`/${params.lang}/certificate`}>{certificateLink}</Link>
+            <Link href={`/${params.lang}/certificates`}>{certificateLink}</Link>
           </ButtonGrow>
 
         </div>

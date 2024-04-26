@@ -1,15 +1,14 @@
-import { Languages } from '@/locales/constants/constants'
+
+import { RouterLangsProps } from '@/locales/constants/constants'
 import { getLocale } from '@/locales/main'
 import { Metadata } from 'next'
 
 interface Props {
   children: JSX.Element
-  params: {
-    lang: Languages
-  }
+
 }
 
-export const generateMetadata = ({ params }: Props): Metadata => {
+export const generateMetadata = ({ params }: RouterLangsProps): Metadata => {
   const { title, description } = getLocale(params.lang).head
 
   return {
@@ -18,6 +17,6 @@ export const generateMetadata = ({ params }: Props): Metadata => {
   }
 }
 
-export default function Layout ({ children, params }: Props): JSX.Element {
+export default function Layout ({ children }: Props): JSX.Element {
   return children
 }

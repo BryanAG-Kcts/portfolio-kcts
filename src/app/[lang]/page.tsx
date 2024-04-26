@@ -1,15 +1,20 @@
-import { RouterLangsProps } from '@/locales/constants/constants'
+import { RouterLangsProps, languages } from '@/locales/constants/constants'
 import { Hero } from './components/hero/hero'
 import { Experience } from './components/experience/experience'
 import { Skills } from './components/skills/skills'
 import { Information } from './components/information/information'
 import { BackendProjects } from './components/backendProject/backendProjects'
-import { Gallery } from './components/frontendProject/gallery'
-import { About } from './components/about/about'
-import { Footer } from './components/footer/footer'
 import { Header } from './components/header/header'
+import { notFound } from 'next/navigation'
+import dynamic from 'next/dynamic'
+
+const Gallery = dynamic(async () => await import('./components/frontendProject/gallery').then(m => m.Gallery))
+const About = dynamic(async () => await import('./components/about/about').then(m => m.About))
+const Footer = dynamic(async () => await import('./components/footer/footer').then(m => m.Footer))
 
 export default function Page ({ params }: RouterLangsProps): JSX.Element {
+  if (!(params.lang in languages)) notFound()
+
   return (
     <>
       <Header params={params} />
