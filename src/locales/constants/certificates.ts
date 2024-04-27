@@ -1,7 +1,7 @@
 export const certificateBody = {
   bootsTrap: {
     name: 'Bootstrap',
-    pdf: 'bootstrap',
+    pdf: 'bootsTrap',
     img: '/images/certificate/bootsTrap.webp'
   },
   tailwindCSS: {

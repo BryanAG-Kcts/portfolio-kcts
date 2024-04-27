@@ -16,6 +16,5 @@ export function GET (_req: NextRequest, { params }: Params): NextResponse {
       status: statusCode.notFound
     }, { status: statusCode.notFound })
   }
-
   return new NextResponse(pdf)
 }
