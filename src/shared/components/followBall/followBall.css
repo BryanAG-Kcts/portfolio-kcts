@@ -1,7 +1,7 @@
 #followBall {
   position: absolute;
-  top: var(--moveY, 0);
-  left: var(--moveX, 0);
+  top: var(--moveY, -100%);
+  left: var(--moveX, -100%);
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);

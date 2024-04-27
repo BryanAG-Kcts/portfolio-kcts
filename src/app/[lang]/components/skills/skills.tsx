@@ -9,7 +9,7 @@ export const Skills = ({ params }: RouterLangsProps): JSX.Element => {
 
   return (
     <>
-      <section className='flex flex-col gap-4 skillsSection overflow-hidden'>
+      <section className='flex flex-col gap-4 skillsSection'>
         <TitleGenerator>{name}</TitleGenerator>
         <Technologies technologies={skills} />
       </section>

@@ -3,15 +3,13 @@ import { useEffect } from 'react'
 import './followBall.css'
 
 export const FollowBall = (): JSX.Element => {
-  const isMobile = /iPhone|iPad|iPod|Android|Windows Phone/i.test(navigator.userAgent)
   useEffect(() => {
+    const isMobile = /iPhone|iPad|iPod|Android|Windows Phone/i.test(navigator.userAgent)
     if (isMobile) return
 
     window.addEventListener('mousemove', followBall)
     return () => window.removeEventListener('mousemove', followBall)
-  }, [isMobile])
-
-  if (isMobile) return <></>
+  }, [])
 
   const followBall = (e: MouseEvent): void => {
     const followBall = document.getElementById('followBall') as HTMLElement
@@ -20,7 +18,7 @@ export const FollowBall = (): JSX.Element => {
   }
 
   return (
-    <section className='fixed top-0 left-0 w-full h-screen z-50 pointer-events-none'>
+    <section className='fixed  w-full h-screen z-50 pointer-events-none'>
       <span id='followBall' className='w-12 h-12 z-50 rounded-full' />
     </section>
   )
