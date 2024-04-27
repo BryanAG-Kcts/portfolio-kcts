@@ -192,7 +192,7 @@ export const projectsBody: Record<string, Project> = {
   },
   backGame2048: {
     name: '2048',
-    technology: expressjs.name,
+    technology: expressjs.publicName,
     color: expressjs.name,
     linkGitHub: linksGitHub.backGame2048,
     key: 'backGame2048',

@@ -4,6 +4,7 @@ import { getRandomFeatures, isPaint } from './constants'
 import './fallingStars.css'
 
 export const FallingStars = (): JSX.Element => {
+  const isMobile = /iPhone|iPad|iPod|Android|Windows Phone/i.test(navigator.userAgent)
   const lastMove = useRef({
     x: 0,
     y: 0
@@ -26,12 +27,13 @@ export const FallingStars = (): JSX.Element => {
   }
 
   useEffect(() => {
-    const isMobile = /iPhone|iPad|iPod|Android|Windows Phone/i.test(navigator.userAgent)
     if (isMobile) return
 
     window.addEventListener('mousemove', fallingStars)
     return () => window.removeEventListener('mousemove', fallingStars)
-  }, [])
+  }, [isMobile])
+
+  if (isMobile) return <></>
 
   return (
     <section id='fallingStars' className='fixed top-0 left-0 w-full h-screen z-50 pointer-events-none' />
