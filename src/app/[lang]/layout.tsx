@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const generateMetadata = ({ params }: RouterLangsProps): Metadata => {
-  const { title, description } = getLocale(params.lang).head
+  const { title, description } = getLocale(params.lang).head.home
 
   return {
     title,
