@@ -21,6 +21,9 @@ export const metadata: Metadata = {
       url: 'https://github.com/BryanAG-Kcts'
     }
   ],
+  icons: {
+    icon: '/images/kactuswowIcon.png'
+  },
   keywords: ['portafolio', 'portfolio', 'Bryan Alvarez', 'kactus', 'BryanAG-Kcts', 'BryanAG', 'Kcts', 'Kactuswow', 'desarrollador', 'desarrollador Web', 'ocaña', 'github', 'developer', 'web developer']
 
 }

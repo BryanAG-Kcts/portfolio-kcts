@@ -19,7 +19,7 @@ export default function Page ({ params }: RouterLangsProps): JSX.Element {
     <>
       <Header params={params} />
       <Hero params={params} />
-      <section id='mainContent' className='greatSection p-2 sectionContentDarkmode'>
+      <section id='mainContent' className='greatSection p-2'>
         <Experience params={params} />
 
         <main className='flex flex-col w-full gap-6 p-3 rounded-lg sectionContentDarkmode bg-slate-100 md:flex-row'>
