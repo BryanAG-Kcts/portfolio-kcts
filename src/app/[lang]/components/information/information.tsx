@@ -16,7 +16,7 @@ export const Information = ({ params }: RouterLangsProps): JSX.Element => {
       <div className='w-full max-w-[500px] flex flex-col gap-5 px-5 py-3 bg-white rounded-2xl cardContentDarkmode'>
         <Infos information={information.information} />
         <ButtonGrow>
-          <Link href='/api/cv'>{indie.cvLink}</Link>
+          <a href='/api/cv' target='_blank' rel='noopener noreferrer'>{indie.cvLink}</a>
         </ButtonGrow>
         <ButtonGrow>
           <Link href={`/${params.lang}/certificates`}>{indie.certificateLink}</Link>

@@ -9,5 +9,5 @@ export const GET = (): NextResponse => {
     return NextResponse.json({ error: err }, { status: statusCode.notFound })
   }
 
-  return new NextResponse(pdf)
+  return new NextResponse(pdf, { status: statusCode.ok })
 }
