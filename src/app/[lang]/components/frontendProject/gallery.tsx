@@ -3,6 +3,7 @@ import { WebProjects } from './webProjects'
 import { RouterLangsProps } from '@/locales/constants/constants'
 import { getLocale } from '@/locales/main'
 import './gallery.css'
+import { TechnologyScroll } from './technologyScroll'
 
 export const Gallery = ({ params }: RouterLangsProps): JSX.Element => {
   const { nameWeb, projects } = getLocale(params.lang).projects
@@ -13,6 +14,7 @@ export const Gallery = ({ params }: RouterLangsProps): JSX.Element => {
         {nameWeb}
       </TitleGenerator>
       <WebProjects webProjects={projects} lang={params.lang} />
+      <TechnologyScroll />
     </section>
   )
 }

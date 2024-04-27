@@ -6,7 +6,7 @@ interface Props {
 export const Certificate = ({ certificate }: Props): JSX.Element => {
   const { img, name, pdf } = certificate
   return (
-    <div className='flex w-full max-w-xl aspect-[16/14]'>
+    <div className='flex w-full max-w-xl aspect-[16/14] certificateGallery'>
       <div className='flex flex-col gap-4 p-3 rounded-lg bg-slate-100 cardContentDarkmode galleryCertificate'>
         <picture className='rounded-lg overflow-hidden flex-1'>
           <img src={img} alt={name} className='hover:scale-110 transition-transform w-full h-full object-cover imgSection' />

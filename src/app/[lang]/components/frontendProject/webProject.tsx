@@ -46,10 +46,8 @@ export const WebProject = ({ webProject, visitLink }: Props): JSX.Element => {
           </div>
         </div>
 
-        <div className='flex items-center flex-1 rounded-lg bg-slate-100 sectionContentDarkmode'>
-          <div className='w-full p-3'>
-            <Technologies technologies={technologies ?? []} />
-          </div>
+        <div className='flex items-center flex-1 rounded-lg bg-slate-100 sectionContentDarkmode projectsGallery'>
+          <Technologies technologies={technologies ?? []} />
         </div>
       </div>
 

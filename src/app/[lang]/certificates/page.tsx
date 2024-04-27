@@ -5,6 +5,7 @@ import { TitleGenerator } from '@/shared/components/titleGenerator/titleGenerato
 import { Gallery } from './components/gallery/gallery'
 import Return from '@/public/images/icons/return.svg'
 import Link from 'next/link'
+import { CertificateScroll } from './components/gallery/certificateScroll'
 
 export default function Page ({ params }: RouterLangsProps): JSX.Element {
   const { certificates, paragraph, title } = getLocale(params.lang).certificate
@@ -16,6 +17,7 @@ export default function Page ({ params }: RouterLangsProps): JSX.Element {
       </article>
 
       <Gallery certificates={certificates} />
+      <CertificateScroll />
 
       <div className='absolute top-0 right-0 m-6 bg-white p-3 rounded-full sectionContentDarkmode'>
         <DarkMode />

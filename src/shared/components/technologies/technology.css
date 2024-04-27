@@ -1,7 +1,0 @@
-.technologyCard:hover {
-  transform: rotate(360deg) scale(0.9);
-}
-
-.technologyCard {
-  transition: transform 350ms ease-in-out;
-}
