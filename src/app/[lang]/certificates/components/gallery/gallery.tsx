@@ -6,7 +6,7 @@ interface Props {
 }
 export const Gallery = ({ certificates }: Props): JSX.Element => {
   return (
-    <section className='flex flex-wrap gap-5 justify-center'>
+    <section className='flex flex-wrap gap-5 justify-center overflow-x-hidden'>
       {
         certificates.map(certificate => <Certificate certificate={certificate} key={certificate.name} />)
       }
