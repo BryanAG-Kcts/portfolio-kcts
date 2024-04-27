@@ -6,6 +6,7 @@ import { BackendProjects } from './components/backendProject/backendProjects'
 import { Header } from './components/header/header'
 import { notFound } from 'next/navigation'
 import dynamic from 'next/dynamic'
+import { FallingStars } from '@/shared/components/fallingStars/fallingStars'
 
 const Gallery = dynamic(async () => await import('./components/frontendProject/gallery').then(m => m.Gallery))
 const About = dynamic(async () => await import('./components/about/about').then(m => m.About))
@@ -17,6 +18,7 @@ export default function Page ({ params }: RouterLangsProps): JSX.Element {
 
   return (
     <>
+      <FallingStars />
       <Header params={params} />
       <Hero params={params} />
       <section id='mainContent' className='greatSection p-2'>
