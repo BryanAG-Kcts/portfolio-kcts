@@ -1,85 +1,89 @@
+import { ElementType } from 'react'
+
 export const technologyImagePath = '/images/technologies/'
+
+export const getTechnologySvg = async (name: string): Promise<ElementType> => await import('@/public/images/technologies/' + name).then(module => module.default)
 
 export const technologies = {
   html5: {
     publicName: 'HTML 5',
     name: 'html5',
-    icon: technologyImagePath + 'html5.svg'
+    icon: getTechnologySvg('html5.svg')
   },
   css3: {
     publicName: 'CSS 3',
     name: 'css3',
-    icon: technologyImagePath + 'css3.svg'
+    icon: getTechnologySvg('css3.svg')
   },
   javascript: {
     publicName: 'JavaScript',
     name: 'javascript',
-    icon: technologyImagePath + 'javascript.svg'
+    icon: getTechnologySvg('javascript.svg')
   },
   reactjs: {
     publicName: 'React',
     name: 'reactjs',
-    icon: technologyImagePath + 'reactjs.svg'
+    icon: getTechnologySvg('reactjs.svg')
   },
   nodejs: {
     publicName: 'Node.js',
     name: 'nodejs',
-    icon: technologyImagePath + 'nodejs.svg'
+    icon: getTechnologySvg('nodejs.svg')
   },
   expressjs: {
     publicName: 'Express.js',
     name: 'expressjs',
-    icon: technologyImagePath + 'expressjs.svg'
+    icon: getTechnologySvg('expressjs.svg')
   },
   java: {
     publicName: 'Java',
     name: 'java',
-    icon: technologyImagePath + 'java.svg'
+    icon: getTechnologySvg('java.svg')
   },
   tailwindcss: {
     publicName: 'Tailwind CSS',
     name: 'tailwindcss',
-    icon: technologyImagePath + 'tailwindcss.svg'
+    icon: getTechnologySvg('tailwindcss.svg')
   },
   git: {
     publicName: 'Git',
     name: 'git',
-    icon: technologyImagePath + 'git.svg'
+    icon: getTechnologySvg('git.svg')
   },
   github: {
     publicName: 'GitHub',
     name: 'github',
-    icon: technologyImagePath + 'github.svg'
+    icon: getTechnologySvg('github.svg')
   },
   typescript: {
     publicName: 'TypeScript',
     name: 'typescript',
-    icon: technologyImagePath + 'typescript.svg'
+    icon: getTechnologySvg('typescript.svg')
   },
   postgresql: {
     publicName: 'PostgreSQL',
     name: 'postgresql',
-    icon: technologyImagePath + 'postgresql.svg'
+    icon: getTechnologySvg('postgresql.svg')
   },
   nextjs: {
     publicName: 'Next.js',
     name: 'nextjs',
-    icon: technologyImagePath + 'nextjs.svg'
+    icon: getTechnologySvg('nextjs.svg')
   },
   threejs: {
     publicName: 'Three.js',
     name: 'threejs',
-    icon: technologyImagePath + 'threejs.svg'
+    icon: getTechnologySvg('threejs.svg')
   },
   angular: {
     publicName: 'Angular',
     name: 'angular',
-    icon: technologyImagePath + 'angular.svg'
+    icon: getTechnologySvg('angular.svg')
   },
   springboot: {
     publicName: 'Spring Boot',
     name: 'springboot',
-    icon: technologyImagePath + 'springboot.svg'
+    icon: getTechnologySvg('springboot.svg')
   }
 } as const
 

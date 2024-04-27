@@ -17,8 +17,8 @@ export const DarkMode = (): JSX.Element => {
 
   return (
     <button aria-label='DarkMode' className='darkmodeBtn flex relative justify-center' onClick={changeDarkMode}>
-      <img title='darkMode' className='firstIcon' src={primaryIcon.icon} alt={primaryIcon.name} />
-      <img title='darkMode' className='secondIcon' src={secondaryIcon.icon} alt={secondaryIcon.name} />
+      <primaryIcon.icon className='firstIcon' />
+      <secondaryIcon.icon className='secondIcon' />
     </button>
   )
 }

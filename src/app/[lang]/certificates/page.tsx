@@ -3,6 +3,7 @@ import { getLocale } from '@/locales/main'
 import { DarkMode } from '@/shared/components/darkmode/darkmode'
 import { TitleGenerator } from '@/shared/components/titleGenerator/titleGenerator'
 import { Gallery } from './components/gallery/gallery'
+import Return from '@/public/images/icons/return.svg'
 import Link from 'next/link'
 
 export default function Page ({ params }: RouterLangsProps): JSX.Element {
@@ -21,7 +22,7 @@ export default function Page ({ params }: RouterLangsProps): JSX.Element {
       </div>
 
       <Link className='absolute top-0 left-0 m-6 w-10 transition-transform hover:-translate-x-2' href={`/${params.lang}`} scroll={false}>
-        <img src='/images/icons/return.svg' alt='Go back' />
+        <Return />
       </Link>
     </main>
   )

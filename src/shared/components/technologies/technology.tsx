@@ -3,11 +3,12 @@ import { Technology as ITechnology } from '@/locales/main'
 interface Props {
   technology: ITechnology
 }
-export const Technology = ({ technology }: Props): JSX.Element => {
-  const { icon, name, publicName } = technology
+export async function Technology ({ technology }: Props): Promise<JSX.Element> {
+  const { icon, publicName } = technology
+  const Icon = await icon
   return (
     <span title={publicName} className='p-4 bg-white rounded-lg select-none cardContentDarkmode'>
-      <img className='w-16 h-16' src={icon} alt={name} />
+      <Icon className='w-16 h-16' />
     </span>
   )
 }
