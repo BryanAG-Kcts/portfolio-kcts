@@ -1,5 +1,5 @@
 import { RouterLangsProps } from '@/locales/constants/constants'
-import { AnimationIcon } from '@/shared/components/animationIcon/animationIcon'
+import { AnimationIcon } from '@/shared/components/animateIcon/animationIcon'
 import { getLocale } from '@/locales/main'
 import './hero.css'
 
