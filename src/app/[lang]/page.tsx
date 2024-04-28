@@ -22,7 +22,7 @@ export default function Page ({ params }: RouterLangsProps): JSX.Element {
       <section id='mainContent' className='greatSection p-2'>
         <Experience params={params} />
 
-        <main className='flex flex-col w-full gap-6 p-3 rounded-lg sectionContentDarkmode bg-slate-100 md:flex-row overflow-x-hidden'>
+        <main className='flex flex-col w-full gap-6 p-3 rounded-lg sectionContentDarkmode bg-slate-100 md:flex-row overflow-hidden'>
           <aside className='flex flex-col items-center flex-1 gap-6'>
             <Skills params={params} />
             <Information params={params} />

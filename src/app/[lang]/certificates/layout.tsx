@@ -12,7 +12,10 @@ export function generateMetadata ({ params }: RouterLangsProps): Metadata {
 
   return {
     title,
-    description
+    description,
+    alternates: {
+      canonical: `/${params.lang}/certificates`
+    }
   }
 }
 

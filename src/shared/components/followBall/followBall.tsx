@@ -12,9 +12,9 @@ export const FollowBall = (): JSX.Element => {
   }, [])
 
   const followBall = (e: MouseEvent): void => {
-    const followBall = document.getElementById('followBall') as HTMLElement
-    followBall.style.setProperty('--moveX', `${e.clientX + 30}px`)
-    followBall.style.setProperty('--moveY', `${e.clientY + 30}px`)
+    const followBall = document.getElementById('followBall')
+    followBall?.style.setProperty('--moveX', `${e.clientX + 30}px`)
+    followBall?.style.setProperty('--moveY', `${e.clientY + 30}px`)
   }
 
   return (

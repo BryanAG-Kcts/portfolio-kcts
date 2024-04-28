@@ -19,11 +19,11 @@ export default function Page ({ params }: RouterLangsProps): JSX.Element {
       <Gallery certificates={certificates} />
       <CertificateScroll />
 
-      <div className='absolute top-0 right-0 m-6 bg-white p-3 rounded-full sectionContentDarkmode'>
+      <div className='absolute top-0 right-0 m-3 bg-white p-3 rounded-full sectionContentDarkmode'>
         <DarkMode />
       </div>
 
-      <Link className='absolute top-0 left-0 m-6 w-10 transition-transform hover:-translate-x-2' href={`/${params.lang}`} scroll={false}>
+      <Link className='absolute top-0 left-0 m-6 w-10 transition-transform hover:-translate-x-2 text-white' href={`/${params.lang}`} scroll={false}>
         <Return />
       </Link>
     </main>

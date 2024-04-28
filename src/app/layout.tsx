@@ -24,7 +24,10 @@ export const metadata: Metadata = {
   icons: {
     icon: '/images/kactuswowIcon.png'
   },
-  keywords: ['portafolio', 'portfolio', 'Bryan Alvarez', 'kactus', 'BryanAG-Kcts', 'BryanAG', 'Kcts', 'Kactuswow', 'desarrollador', 'desarrollador Web', 'ocaña', 'github', 'developer', 'web developer']
+  keywords: ['portafolio', 'portfolio', 'Bryan Alvarez', 'kactus', 'BryanAG-Kcts', 'BryanAG', 'Kcts', 'Kactuswow', 'desarrollador', 'desarrollador Web', 'ocaña', 'github', 'developer', 'web developer'],
+  alternates: {
+    canonical: '/'
+  }
 
 }
 
