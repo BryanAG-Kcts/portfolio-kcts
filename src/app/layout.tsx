@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   keywords: ['portafolio', 'portfolio', 'Bryan Alvarez', 'kactus', 'BryanAG-Kcts', 'BryanAG', 'Kcts', 'Kactuswow', 'desarrollador', 'desarrollador Web', 'ocaña', 'github', 'developer', 'web developer'],
   alternates: {
-    canonical: '/'
+    canonical: 'https://portfolio-kcts.vercel.app/'
   },
   manifest: '/manifest.json'
 

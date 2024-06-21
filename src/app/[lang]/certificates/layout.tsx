@@ -14,7 +14,7 @@ export function generateMetadata ({ params }: RouterLangsProps): Metadata {
     title,
     description,
     alternates: {
-      canonical: `/${params.lang}/certificates`
+      canonical: `https://portfolio-kcts.vercel.app/${params.lang}/certificates`
     }
   }
 }
