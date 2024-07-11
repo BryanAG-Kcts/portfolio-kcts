@@ -5,7 +5,6 @@ import { RouterLangsProps } from '@/locales/constants/constants'
 import { getLocale } from '@/locales/main'
 import Link from 'next/link'
 import './about.css'
-import { ChatBot } from '../chatBot/chatBot'
 
 export const About = ({ params }: RouterLangsProps): JSX.Element => {
   const { certificateLink, cvLink } = getLocale(params.lang).indie
@@ -29,7 +28,6 @@ export const About = ({ params }: RouterLangsProps): JSX.Element => {
         <section className='md:flex-1 lg:flex-[2]'>
           <AboutAside lang={params.lang} />
           <SoftSkills lang={params.lang} />
-          <ChatBot lang={params.lang} />
         </section>
       </section>
     </div>

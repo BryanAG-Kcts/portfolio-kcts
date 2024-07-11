@@ -1,6 +1,5 @@
 import { about, softSkill } from './about'
 import { certificate } from './certificate'
-import { chatBot } from './chatBot'
 import { experience } from './experience'
 import { head } from './head'
 import { header } from './header'
@@ -20,8 +19,7 @@ const main = {
   projects,
   about,
   softSkill,
-  certificate,
-  chatBot
+  certificate
 }
 
 export default main

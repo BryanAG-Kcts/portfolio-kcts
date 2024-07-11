@@ -14,7 +14,7 @@
 @keyframes backGroundMove {
   0% {
     background-position: 0% 0%;
-    background-size: 150%;
+    background-size: 170%;
   }
   20% {
     background-position: 50% 50%;

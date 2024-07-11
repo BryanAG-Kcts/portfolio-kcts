@@ -1,18 +1,17 @@
 import { RouterLangsProps } from '@/locales/constants/constants'
 import { Hero } from './components/hero/hero'
 import { Experience } from './components/experience/experience'
-import { Information } from './components/information/information'
-import { BackendProjects } from './components/backendProject/backendProjects'
 import { Header } from './components/header/header'
-
 import dynamic from 'next/dynamic'
-import { FallingStars } from '@/shared/components/fallingStars/fallingStars'
-import { HoverTechnology } from '@/shared/components/technologies/hoverTechnology'
 
 const Gallery = dynamic(async () => await import('./components/frontendProject/gallery').then(m => m.Gallery))
 const About = dynamic(async () => await import('./components/about/about').then(m => m.About))
 const Footer = dynamic(async () => await import('./components/footer/footer').then(m => m.Footer))
 const Skills = dynamic(async () => await import('./components/skills/skills').then(m => m.Skills))
+const Information = dynamic(async () => await import('./components/information/information').then(m => m.Information))
+const BackendProjects = dynamic(async () => await import('./components/backendProject/backendProjects').then(m => m.BackendProjects))
+const HoverTechnology = dynamic(async () => await import('@/shared/components/technologies/hoverTechnology').then(m => m.HoverTechnology))
+const FallingStars = dynamic(async () => await import('@/shared/components/fallingStars/fallingStars').then(m => m.FallingStars))
 
 export default function Page ({ params }: RouterLangsProps): JSX.Element {
   return (
@@ -32,10 +31,10 @@ export default function Page ({ params }: RouterLangsProps): JSX.Element {
 
         <Gallery params={params} />
         <About params={params} />
-        {/* <span className='precharge text-dk-color-gray-100 bg-dk-color-gray-100 text-lt-color-yellow-100 text-dk-color-blue-100 bg-lt-color-green-100 bg-lt-color-green-200 bg-lt-color-yellow-100 bg-dk-color-blue-100 bg-black text-black text-lt-color-blue-100 bg-lt-color-blue-100' /> */}
 
       </section>
       <Footer />
+
       <HoverTechnology />
       <FallingStars />
     </>
