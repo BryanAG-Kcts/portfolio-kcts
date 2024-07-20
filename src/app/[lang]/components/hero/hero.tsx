@@ -27,7 +27,7 @@ export const Hero = ({ params }: RouterLangsProps): JSX.Element => {
           <p className='text-md sm:text-xl'>{paragraph}</p>
         </div>
 
-        <span className='w-64 h-64 overflow-hidden rounded-lg md:w-72 md:h-72 lg:w-96 lg:h-96'>
+        <span className='w-64 h-64 overflow-hidden rounded-full md:w-72 md:h-72 lg:w-96 lg:h-96'>
           <img
             className='object-cover w-full h-full imgSection'
             src='/images/meHero.webp'

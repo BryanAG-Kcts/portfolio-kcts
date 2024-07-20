@@ -17,7 +17,7 @@ export const About = ({ params }: RouterLangsProps): JSX.Element => {
 
           <img draggable='false' decoding='async' loading='lazy' className='aspect-square object-cover rounded-lg max-w-sm w-full mx-auto' src='/images/meAbout.webp' alt='🌵' />
           <ButtonGrow>
-            <a href='/api/cv' target='_blank' rel='noopener noreferrer'>{cvLink}</a>
+            <a href={`/api/${params.lang}/cv`} target='_blank' rel='noopener noreferrer'>{cvLink}</a>
           </ButtonGrow>
           <ButtonGrow>
             <Link href={`/${params.lang}/certificates`}>{certificateLink}</Link>

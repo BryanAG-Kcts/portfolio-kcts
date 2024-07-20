@@ -10,8 +10,12 @@ const Footer = dynamic(async () => await import('./components/footer/footer').th
 const Skills = dynamic(async () => await import('./components/skills/skills').then(m => m.Skills))
 const Information = dynamic(async () => await import('./components/information/information').then(m => m.Information))
 const BackendProjects = dynamic(async () => await import('./components/backendProject/backendProjects').then(m => m.BackendProjects))
-const HoverTechnology = dynamic(async () => await import('@/shared/components/technologies/hoverTechnology').then(m => m.HoverTechnology))
-const FallingStars = dynamic(async () => await import('@/shared/components/fallingStars/fallingStars').then(m => m.FallingStars))
+const HoverTechnology = dynamic(async () => await import('@/shared/components/technologies/hoverTechnology').then(m => m.HoverTechnology),
+  { ssr: false }
+)
+const FallingStars = dynamic(async () => await import('@/shared/components/fallingStars/fallingStars').then(m => m.FallingStars),
+  { ssr: false }
+)
 
 export default function Page ({ params }: RouterLangsProps): JSX.Element {
   return (

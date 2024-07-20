@@ -38,5 +38,6 @@ export const SkillsIntro = (): null => {
 
     return () => ctx.revert()
   }, [])
+
   return null
 }
