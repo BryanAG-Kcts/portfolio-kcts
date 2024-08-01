@@ -6,7 +6,7 @@ export const experience = {
     {
       title: 'Desarrollador freelance',
       time: nowadays.es,
-      text: 'Desarrollador web con experiencia freelance en Ocaña, con conocimientos sólidos en JavaScript, ES6, HTML5, CSS3, TailwindCSS, React.js, TypeScript, Zustand, Node.js, Express.js, Java y MySQL. Actualmente, estoy trabajando de manera freelance desarrollando páginas web por encargo. Estoy buscando ser parte de una organización, me encantaría trabajar en equipo, donde pueda compartir ideas y experiencias con personas apasionadas por el desarrollo y la programación.'
+      text: 'Desarrollador web con experiencia freelance en Ocaña, con conocimientos sólidos sobre el ecosistema de JavaScript. Desarrollo páginas web personalizadas por encargo y soy líder de mi propio proyecto universitario'
     },
     {
       title: 'Asesorias de programación en Ocaña',

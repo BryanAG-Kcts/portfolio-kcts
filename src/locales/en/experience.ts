@@ -6,7 +6,7 @@ export const experience = {
     {
       title: 'Freelance developer',
       time: nowadays.en,
-      text: 'Experienced freelance web developer in Ocaña, with solid knowledge in JavaScript, ES6, HTML5, CSS3, TailwindCSS, React.js, TypeScript, Zustand, Node.js, Express.js, Java and MySQL. Currently, I am working freelance developing custom web pages. I am looking to be part of an organization, I would love to work in a team, where I can share ideas and experiences with people passionate about development and programming.'
+      text: 'Experienced freelance web developer in Ocaña, with solid knowledge of the JavaScript ecosystem. I develop custom web pages on request and I am the leader of my own university project.'
     },
     {
       title: 'Programming consultancies in Ocaña',
