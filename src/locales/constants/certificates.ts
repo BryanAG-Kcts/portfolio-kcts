@@ -1,4 +1,29 @@
 export const certificateBody = {
+  foundationsDb: {
+    name: 'Oracle foundations DataBase',
+    pdf: 'foundationsDb',
+    img: '/images/certificate/foundationsDb.webp'
+  },
+  programmingSql: {
+    name: 'Oracle Programming SQL',
+    pdf: 'programmingSql',
+    img: '/images/certificate/programmingSql.webp'
+  },
+  ufpsoXInnovation: {
+    name: 'UFPSO X Innovation',
+    pdf: 'ufpsoXInnovation',
+    img: '/images/certificate/ufpsoXInnovation.webp'
+  },
+  ufpsoXIInnovation: {
+    name: 'UFPSO XI Innovation',
+    pdf: 'ufpsoXIInnovation',
+    img: '/images/certificate/ufpsoXIInnovation.webp'
+  },
+  ufpsoProject1: {
+    name: 'UFPSO Junior Project',
+    pdf: 'ufpsoProject1',
+    img: '/images/certificate/ufpsoProject1.webp'
+  },
   bootsTrap: {
     name: 'Bootstrap',
     pdf: 'bootsTrap',
@@ -83,6 +108,31 @@ export const certificateBody = {
     name: 'HTML GM',
     pdf: 'htmlGM',
     img: '/images/certificate/htmlGM.webp'
+  },
+  mySqlCourse: {
+    name: 'MySql course',
+    pdf: 'cursoMySQL',
+    img: '/images/certificate/cursoMySQL.webp'
+  },
+  fullStack: {
+    name: 'FullStack desktop',
+    pdf: 'fullStackEscritorio',
+    img: '/images/certificate/fullStackEscritorio.webp'
+  },
+  vscMaster: {
+    name: 'VSC Master',
+    pdf: 'vscMaster',
+    img: '/images/certificate/vscMaster.webp'
+  },
+  sql50: {
+    name: 'SQL 50 questions',
+    pdf: 'sqlDesdeCero50',
+    img: '/images/certificate/sqlDesdeCero50.webp'
+  },
+  reactSpring: {
+    name: 'React Spring',
+    pdf: 'reactSpring',
+    img: '/images/certificate/reactSpring.webp'
   }
 }
 
