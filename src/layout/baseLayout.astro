@@ -1,0 +1,68 @@
+---
+import type { Languages } from '@/interfaces/i18n'
+import '@/styles/global.css'
+
+interface Props {
+  title: string
+  lang: Languages
+  description: string
+  keywords: string[]
+}
+
+const { title, lang, description, keywords } = Astro.props
+---
+
+<html lang={lang}>
+  <head>
+    <!-- Charset and viewport -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Basic SEO -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords.join(', ')} />
+    <meta name="author" content="Kactuswow" />
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="7 days" />
+
+    <!-- Icons -->
+    <link rel="icon" type="" href="" />
+    <link rel="apple-touch-icon" href="" />
+
+    <!-- Theme color, manifest, sitemap, canonical -->
+    <link rel="canonical" href={Astro.url.href} />
+    <meta name="theme-color" content="" />
+    <link rel="manifest" href="" />
+    <link rel="sitemap" href="" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content={lang} />
+    <meta property="og:site_name" content={title} />
+    <meta property="og:image" content="" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url.href} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="" />
+
+    <!-- Security -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+
+    <!-- Astro generator -->
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
