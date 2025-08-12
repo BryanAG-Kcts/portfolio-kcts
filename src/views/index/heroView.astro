@@ -1,6 +1,6 @@
 ---
+import { HeroBackground } from '@/components/hero/heroBackground'
 import { HeroTitles } from '@/components/hero/heroTitles'
-import { Rotator } from '@/components/ui/rotator'
 
 interface Props {
   titles: string[]
@@ -11,10 +11,12 @@ const { titles, subtitle } = Astro.props
 ---
 
 <section
-  class="p-2 w-full h-screen flex flex-col justify-center items-center text-center"
+  class="p-2 w-full h-screen flex flex-col justify-center items-center text-center gap-1 relative z-10"
 >
   <HeroTitles client:idle titles={titles} />
   <p class="text-lg">{subtitle}</p>
+
+  <HeroBackground client:idle />
 </section>
 
 <style>

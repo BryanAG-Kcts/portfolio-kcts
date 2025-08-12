@@ -9,7 +9,7 @@ export function HeroTitles({ titles }: Props) {
     <Rotator interval={2000}>
       {titles.map(title => (
         <h1
-          className='text-4xl font-bold'
+          className='text-4xl font-bold md:text-5xl'
           key={title}>
           {title}
         </h1>
