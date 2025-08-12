@@ -1,0 +1,29 @@
+---
+import { HeroTitles } from '@/components/hero/heroTitles'
+import { Rotator } from '@/components/ui/rotator'
+
+interface Props {
+  titles: string[]
+  subtitle: string
+}
+
+const { titles, subtitle } = Astro.props
+---
+
+<section
+  class="p-2 w-full h-screen flex flex-col justify-center items-center text-center"
+>
+  <HeroTitles client:idle titles={titles} />
+  <p class="text-lg">{subtitle}</p>
+</section>
+
+<style>
+  section {
+    background-color: var(--background);
+    font-family: 'Poppins', sans-serif;
+  }
+
+  section p {
+    font-family: 'Quicksand', sans-serif;
+  }
+</style>
