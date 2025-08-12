@@ -1,19 +1,27 @@
-import { useFrame } from '@react-three/fiber'
+import { useFrame, useThree } from '@react-three/fiber'
 import { useRef } from 'react'
-import type { Points } from 'three'
+import type { Points, PointsMaterial } from 'three'
+import { getPrimaryColor } from '@/lib/utils'
 
 interface Props {
   amount: number
+  spread: number
+  size: number
 }
 
-export function CanvasParticles({ amount }: Props) {
+export function CanvasParticles({ amount, spread, size }: Props) {
   const pointsRef = useRef<Points>(null)
-  const particles = generateParticles(amount)
+  const { pointer } = useThree()
+  const particles = generateParticles(amount, spread)
+  const color = getPrimaryColor()
 
-  useFrame(() => {
+  useFrame(state => {
     if (pointsRef.current) {
-      pointsRef.current.rotation.y += 0.0005
-      pointsRef.current.rotation.x += 0.0002
+      const t = state.clock.getElapsedTime()
+      const material = pointsRef.current.material as PointsMaterial
+      material.opacity = Math.min(t / 1.5, 0.8)
+      pointsRef.current.rotation.y += 0.001 + pointer.x * 0.005
+      pointsRef.current.rotation.x += 0.001 + pointer.y * 0.005
     }
   })
 
@@ -29,9 +37,9 @@ export function CanvasParticles({ amount }: Props) {
       </bufferGeometry>
 
       <pointsMaterial
-        color={'#ffffff'}
-        opacity={0.8}
-        size={0.02}
+        color={color}
+        opacity={0}
+        size={size}
         sizeAttenuation
         transparent
       />
@@ -39,13 +47,13 @@ export function CanvasParticles({ amount }: Props) {
   )
 }
 
-function generateParticles(amount: number) {
+function generateParticles(amount: number, spread: number) {
   const particles = new Float32Array(amount * 3)
 
   for (let i = 0; i < amount; i++) {
-    const x = (Math.random() - 0.5) * 10
-    const y = (Math.random() - 0.5) * 10
-    const z = (Math.random() - 0.5) * 10
+    const x = (Math.random() - 0.5) * spread
+    const y = (Math.random() - 0.5) * spread
+    const z = (Math.random() - 0.5) * spread
 
     particles[i * 3] = x
     particles[i * 3 + 1] = y

@@ -1,10 +1,12 @@
 import { OrbitControls } from '@react-three/drei'
+import { getPrimaryColor } from '@/lib/utils'
 
 export function CanvasConfig() {
+  const color = getPrimaryColor()
   return (
     <>
       <ambientLight
-        color={'#1a1a40'}
+        color={color}
         intensity={0.2}
       />
 
@@ -15,7 +17,7 @@ export function CanvasConfig() {
 
       <OrbitControls
         enablePan={false}
-        maxDistance={20}
+        maxDistance={10}
         minDistance={5}
       />
     </>

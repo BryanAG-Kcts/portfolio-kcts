@@ -7,7 +7,11 @@ export function HeroBackground() {
     <figure className='absolute inset-0 -z-10'>
       <Canvas camera={{ position: [0, 0, 10], fov: 45 }}>
         <CanvasConfig />
-        <CanvasParticles amount={1000} />
+        <CanvasParticles
+          amount={500}
+          size={0.04}
+          spread={10}
+        />
 
         <mesh
           position={[0, 0, 0]}
