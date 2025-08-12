@@ -1,5 +1,6 @@
 import { Canvas } from '@react-three/fiber'
 import { CanvasConfig } from './canvasConfig'
+import { CanvasFigure } from './canvasFigure'
 import { CanvasParticles } from './canvasParticles'
 
 export function HeroBackground() {
@@ -13,12 +14,7 @@ export function HeroBackground() {
           spread={10}
         />
 
-        <mesh
-          position={[0, 0, 0]}
-          rotation={[10, 45, 0]}>
-          <boxGeometry args={[1, 1, 1]} />
-          <meshStandardMaterial color={'red'} />
-        </mesh>
+        <CanvasFigure />
       </Canvas>
     </figure>
   )
