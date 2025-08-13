@@ -1,20 +1,24 @@
 ---
+import { getCollection } from 'astro:content'
 import { HeroBackground } from '@/components/hero/heroBackground'
 import { HeroTitles } from '@/components/hero/heroTitles'
+import type { Languages } from '@/interfaces/i18n'
 
 interface Props {
-  titles: string[]
-  subtitle: string
+  lang: Languages
 }
 
-const { titles, subtitle } = Astro.props
+const { lang } = Astro.props
+const [hero] = await getCollection('hero', ({ slug }) => slug === lang)
 ---
 
 <section
-  class="p-2 w-full h-screen flex flex-col justify-center items-center text-center gap-1 relative z-10"
+  class="p-2 w-full h-screen flex flex-col justify-center items-center text-center relative z-10"
 >
-  <HeroTitles client:idle titles={titles} />
-  <p class="text-lg">{subtitle}</p>
+  <div class="h-2/3 flex flex-col justify-center items-center gap-1">
+    <HeroTitles client:idle titles={hero.data.wordList} />
+    <p class="text-lg">{hero.body}</p>
+  </div>
 
   <HeroBackground client:idle />
 </section>

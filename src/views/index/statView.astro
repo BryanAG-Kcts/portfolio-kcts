@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content'
+import { StatCard } from '@/components/statCards/statCard'
+import { Counter } from '@/components/ui/counter'
+import type { Languages } from '@/interfaces/i18n'
+import WidthLayout from '@/layout/widthLayout.astro'
+
+interface Props {
+  lang: Languages
+}
+const { lang } = Astro.props
+const stats = await getCollection('stats', ({ slug }) => slug.startsWith(lang))
+---
+
+<WidthLayout>
+  <section class="p-4 grid grid-cols-2 gap-2 md:grid-cols-4">
+    {
+      stats.map((stat) => (
+        <StatCard content={stat.body}>
+          <Counter
+            client:visible
+            countOptions={{
+              end: stat.data.number,
+              ref: stat.slug,
+              suffix: stat.data.suffix
+            }}
+            className="counter text-2xl"
+          />
+        </StatCard>
+      ))
+    }
+  </section>
+</WidthLayout>
+
+<style>
+  .counter {
+    font-family: 'Poppins', sans-serif;
+  }
+</style>

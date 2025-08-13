@@ -7,4 +7,12 @@ const hero = defineCollection({
   })
 })
 
-export const collections = { hero }
+const stats = defineCollection({
+  type: 'content',
+  schema: z.object({
+    number: z.number(),
+    suffix: z.string()
+  })
+})
+
+export const collections = { hero, stats }

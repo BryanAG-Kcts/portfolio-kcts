@@ -1,11 +1,7 @@
 ---
-import { getCollection } from 'astro:content'
 import BaseLayout from '@/layout/baseLayout.astro'
 import HeroView from '@/views/index/heroView.astro'
-
-const [hero] = await getCollection('hero', file => {
-  return file.slug === 'en'
-})
+import StatView from '@/views/index/statView.astro'
 ---
 
 <BaseLayout
@@ -14,5 +10,6 @@ const [hero] = await getCollection('hero', file => {
   description="Home page"
   keywords={['home', 'portfolio', 'kcts']}
 >
-  <HeroView titles={hero.data.wordList} subtitle={hero.body} />
+  <HeroView lang="en" />
+  <StatView lang="en" />
 </BaseLayout>

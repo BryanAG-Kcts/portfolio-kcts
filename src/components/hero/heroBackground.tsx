@@ -5,7 +5,7 @@ import { CanvasParticles } from './canvasParticles'
 
 export function HeroBackground() {
   return (
-    <figure className='absolute inset-0 -z-10'>
+    <figure className='absolute inset-0 -z-10 cursor-grab'>
       <Canvas camera={{ position: [0, 0, 10], fov: 45 }}>
         <CanvasConfig />
         <CanvasParticles
