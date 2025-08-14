@@ -1,0 +1,53 @@
+---
+import { getCollection } from 'astro:content'
+import { ContactButton } from '@/components/header/contactButton'
+import type { Languages } from '@/interfaces/i18n'
+
+interface Props {
+  lang: Languages
+}
+
+const { lang } = Astro.props
+const [header] = await getCollection('header', ({ slug }) => slug === lang)
+---
+
+<header
+  class="fixed top-0 left-0 z-50 p-4 flex items-center justify-between w-full transition-colors duration-700"
+>
+  <a
+    href="#hero"
+    class="text-xl font-[Poppins] hover:scale-105 transition-transform"
+  >
+    {header.body}
+  </a>
+
+  <nav class="hidden md:flex gap-5">
+    {
+      header.data.sections.map(({ link, name }) => (
+        <a href={link} class="header-links">
+          <span>{name}</span>
+          <span class="underline block h-0.5 w-0 transition-all duration-150 bg-current" />
+        </a>
+      ))
+    }
+  </nav>
+
+  <ContactButton text={header.data.contact} link="#contact" />
+</header>
+
+<script>
+  const header = document.querySelector('header')
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      header?.classList.add('bg-background')
+    } else {
+      header?.classList.remove('bg-background')
+    }
+  })
+</script>
+
+<style>
+  .header-links:hover .underline {
+    width: 100%;
+  }
+</style>

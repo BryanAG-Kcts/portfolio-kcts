@@ -1,15 +1,19 @@
 ---
 import BaseLayout from '@/layout/baseLayout.astro'
+import HeaderView from '@/views/index/headerView.astro'
 import HeroView from '@/views/index/heroView.astro'
 import StatView from '@/views/index/statView.astro'
+
+const lang = 'en'
 ---
 
 <BaseLayout
   title="Home"
-  lang="en"
+  lang={lang}
   description="Home page"
   keywords={['home', 'portfolio', 'kcts']}
 >
-  <HeroView lang="en" />
-  <StatView lang="en" />
+  <HeaderView lang={lang} />
+  <HeroView lang={lang} />
+  <StatView lang={lang} />
 </BaseLayout>

@@ -15,4 +15,15 @@ const stats = defineCollection({
   })
 })
 
-export const collections = { hero, stats }
+const header = defineCollection({
+  type: 'content',
+  schema: z.object({
+    contact: z.string(),
+    sections: z.array(z.object({
+      link: z.string(),
+      name: z.string()
+    }))
+  })
+})
+
+export const collections = { hero, stats, header }

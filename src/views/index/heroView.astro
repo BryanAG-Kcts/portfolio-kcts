@@ -14,6 +14,7 @@ const [hero] = await getCollection('hero', ({ slug }) => slug === lang)
 
 <section
   class="p-2 w-full h-screen flex flex-col justify-center items-center text-center relative z-10"
+  id="hero"
 >
   <div class="h-2/3 flex flex-col justify-center items-center gap-1">
     <HeroTitles client:idle titles={hero.data.wordList} />
