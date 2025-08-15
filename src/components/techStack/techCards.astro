@@ -1,0 +1,33 @@
+---
+import type { Technology } from '@/constants/techStack'
+import { TechCard } from './techCard'
+
+interface Props {
+  technologies: Technology[]
+  textLevel: string
+  skillLevel: {
+    0: string
+    1: string
+    2: string
+    3: string
+    4: string
+  }
+}
+
+const { technologies, skillLevel, textLevel } = Astro.props
+---
+
+<div class="grid grid-cols-3 justify-items-center gap-4">
+  {
+    technologies.map((technology) => (
+      <TechCard
+        client:visible
+        name={technology.name}
+        level={skillLevel[technology.level]}
+        textLevel={textLevel}
+      >
+        <technology.Logo class="w-10 h-10" aria-label={technology.name} />
+      </TechCard>
+    ))
+  }
+</div>

@@ -12,8 +12,8 @@ const { lang } = Astro.props
 const stats = await getCollection('stats', ({ slug }) => slug.startsWith(lang))
 ---
 
-<WidthLayout>
-  <section class="p-4 grid grid-cols-2 gap-2 md:grid-cols-4">
+<WidthLayout size="xl">
+  <section class="grid grid-cols-2 gap-2 md:grid-cols-4">
     {
       stats.map((stat) => (
         <StatCard content={stat.body}>

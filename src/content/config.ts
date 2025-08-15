@@ -19,11 +19,30 @@ const header = defineCollection({
   type: 'content',
   schema: z.object({
     contact: z.string(),
-    sections: z.array(z.object({
-      link: z.string(),
-      name: z.string()
-    }))
+    sections: z.array(
+      z.object({
+        link: z.string(),
+        name: z.string()
+      })
+    )
   })
 })
 
-export const collections = { hero, stats, header }
+const techStack = defineCollection({
+  type: 'content',
+  schema: z.object({
+    frontend: z.string(),
+    backend: z.string(),
+    learning: z.string(),
+    tools: z.string(),
+    skillLevel: z.object({
+      0: z.string(),
+      1: z.string(),
+      2: z.string(),
+      3: z.string(),
+      4: z.string()
+    })
+  })
+})
+
+export const collections = { hero, stats, header, techStack }

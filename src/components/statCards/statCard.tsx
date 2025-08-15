@@ -1,10 +1,5 @@
 import type { JSX } from 'react'
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle
-} from '../ui/card'
+import { Card, CardDescription, CardHeader, CardTitle } from '../ui/card'
 
 interface Props {
   children: JSX.Element

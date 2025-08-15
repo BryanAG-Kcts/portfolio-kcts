@@ -10,9 +10,9 @@ export function Counter({ countOptions, ...props }: Props) {
   return (
     <span
       id={countOptions.ref}
-      {...props}
-    >
-      {countOptions.start ?? 0}{countOptions.suffix}
+      {...props}>
+      {countOptions.start ?? 0}
+      {countOptions.suffix}
     </span>
   )
 }
