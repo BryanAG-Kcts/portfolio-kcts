@@ -45,4 +45,14 @@ const techStack = defineCollection({
   })
 })
 
-export const collections = { hero, stats, header, techStack }
+const footer = defineCollection({
+  type: 'content',
+  schema: z.object({
+    github: z.string(),
+    gmail: z.string(),
+    linkedin: z.string(),
+    copyright: z.string()
+  })
+})
+
+export const collections = { hero, stats, header, techStack, footer }
