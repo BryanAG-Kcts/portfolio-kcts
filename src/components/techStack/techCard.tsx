@@ -10,7 +10,7 @@ interface Props {
 }
 export function TechCard({ children, name, level, textLevel }: Props) {
   return (
-    <HoverCard openDelay={400} >
+    <HoverCard openDelay={400}>
       <HoverCardTrigger asChild>
         <Card>
           <CardContent>{children}</CardContent>
