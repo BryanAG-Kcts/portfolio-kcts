@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content'
+import ExperienceCard from '@/components/experience/experienceCard.astro'
+import type { Languages } from '@/interfaces/i18n'
+import WidthLayout from '@/layout/widthLayout.astro'
+import { ChevronRight } from 'lucide-react'
+
+interface Props {
+  lang: Languages
+}
+
+const { lang } = Astro.props
+const experience = await getCollection('experience', ({ slug }) =>
+  slug.startsWith(lang)
+)
+---
+
+<WidthLayout size="sm">
+  <section class="grid grid-cols-[1fr_5fr] gap-y-20 relative">
+      {experience.map(({ data }, index) => (
+        <div class="flex justify-center">
+            <span class="size-10 rounded-full bg-primary z-10 flex items-center justify-center" >
+                <ChevronRight className="size-7 text-primary-foreground" />
+            </span>
+            {!index && <div class="absolute rounded-full w-0.5 h-full gradient-line" />}
+        </div>
+        <ExperienceCard {...data} />
+    ))}
+  </section>
+</WidthLayout>
+
+<style>
+.gradient-line {
+  background: linear-gradient(
+    0deg,
+    rgba(69, 222, 196, 0) 0%,
+    var(--secondary) 25%,
+    var(--muted) 37.51%,
+    var(--primary) 92.91%
+  );
+}
+</style>

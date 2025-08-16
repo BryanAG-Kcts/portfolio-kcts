@@ -55,4 +55,20 @@ const footer = defineCollection({
   })
 })
 
-export const collections = { hero, stats, header, techStack, footer }
+const experience = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    time: z.string(),
+    responsibilities: z.array(z.string())
+  })
+})
+
+export const collections = {
+  hero,
+  stats,
+  header,
+  techStack,
+  footer,
+  experience
+}
