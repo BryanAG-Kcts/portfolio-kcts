@@ -1,0 +1,22 @@
+---
+import type { IconCard } from '@/constants/about'
+import { Card, CardContent, CardHeader } from '../ui/card'
+
+interface Props {
+  title: string
+  content: string
+  Icon: IconCard
+}
+
+const { title, content, Icon } = Astro.props
+---
+
+<Card className="sm:last:col-span-2 lg:last:col-start-2 lg:last:col-span-1">
+  <CardHeader>
+    <Icon className="size-10" />
+  </CardHeader>
+  <CardContent className="flex flex-col gap-4">
+    <h3 class="text-2xl font-bold font-[Poppins]">{title}</h3>
+    <p>{content}</p>
+  </CardContent>
+</Card>

@@ -80,6 +80,21 @@ const projects = defineCollection({
   })
 })
 
+const about = defineCollection({
+  type: 'content',
+  schema: z.object({
+    cv: z.string(),
+    contact: z.string(),
+    cards: z.array(
+      z.object({
+        title: z.string(),
+        icon: z.string(),
+        content: z.string()
+      })
+    )
+  })
+})
+
 export const collections = {
   hero,
   stats,
@@ -88,5 +103,6 @@ export const collections = {
   footer,
   experience,
   projects,
-  certificates
+  certificates,
+  about
 }

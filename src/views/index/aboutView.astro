@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content'
+import AboutCard from '@/components/about/aboutCard.astro'
+import { LinkButton } from '@/components/ui/linkButton'
+import { iconCards } from '@/constants/about'
+import type { Languages } from '@/interfaces/i18n'
+import WidthLayout from '@/layout/widthLayout.astro'
+
+interface Props {
+  lang: Languages
+}
+
+const { lang } = Astro.props
+const [about] = await getCollection('about', ({ slug }) => slug === lang)
+const { Content } = await about.render()
+---
+
+<WidthLayout size="xl">
+  <section class="flex flex-col gap-10 lg:flex-row">
+    <div class="flex flex-col gap-4 text-lg flex-1 leading-relaxed max-w-prose">
+      <Content />
+      <div class="flex gap-4">
+        <LinkButton href={`${lang}/cv`}>
+          {about.data.cv}
+        </LinkButton>
+        <LinkButton href="#contact" variant="secondary">
+          {about.data.contact}
+        </LinkButton>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 flex-1/12">
+      {
+        about.data.cards.map((card) => (
+          <AboutCard
+            Icon={iconCards[card.icon as keyof typeof iconCards]}
+            title={card.title}
+            content={card.content}
+          />
+        ))
+      }
+    </div>
+  </section>
+</WidthLayout>

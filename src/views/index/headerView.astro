@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content'
-import { ContactButton } from '@/components/header/contactButton'
+import { LinkButton } from '@/components/ui/linkButton'
 import type { Languages } from '@/interfaces/i18n'
 
 interface Props {
@@ -32,7 +32,9 @@ const [header] = await getCollection('header', ({ slug }) => slug === lang)
     }
   </nav>
 
-  <ContactButton text={header.data.contact} link="#contact" />
+  <LinkButton href="#contact">
+    {header.data.contact}
+  </LinkButton>
 </header>
 
 <script>
