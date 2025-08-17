@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content'
 import Github from '@/assets/logos/github.svg'
 import Gmail from '@/assets/logos/gmail.svg'
 import Linkedin from '@/assets/logos/linkedin.svg'
+import { FooterCanvas } from '@/components/footer/footerCanvas'
 import { FooterCard } from '@/components/footer/footerCard'
 import type { Languages } from '@/interfaces/i18n'
 import WidthLayout from '@/layout/widthLayout.astro'
@@ -15,31 +16,33 @@ const { lang } = Astro.props
 const [footer] = await getCollection('footer', ({ slug }) => slug === lang)
 ---
 
-<WidthLayout size="xl">
-  <footer
-    class="p-4 gap-4 grid grid-cols-1 justify-items-center sm:grid-cols-3"
-  >
-    <p>{footer.body}</p>
-    <div class="flex gap-4">
-      <FooterCard
-        link="https://github.com/bryanag_kcts"
-        title={footer.data.github}
-      >
-        <Github class="size-full" />
-      </FooterCard>
-      <FooterCard
-        link="mailto:bryanag.kcts@gmail.com"
-        title={footer.data.gmail}
-      >
-        <Gmail class="size-full" />
-      </FooterCard>
-      <FooterCard
-        link="https://www.linkedin.com/in/bryanag-kcts/"
-        title={footer.data.linkedin}
-      >
-        <Linkedin class="size-full" />
-      </FooterCard>
+<footer class="flex flex-col gap-4">
+  <FooterCanvas client:visible />
+
+  <WidthLayout size="xl">
+    <div class="p-4 gap-4 grid grid-cols-1 justify-items-center sm:grid-cols-3">
+      <p>{footer.body}</p>
+      <div class="flex gap-4">
+        <FooterCard
+          link="https://github.com/bryanag_kcts"
+          title={footer.data.github}
+        >
+          <Github class="size-full" />
+        </FooterCard>
+        <FooterCard
+          link="mailto:bryanag.kcts@gmail.com"
+          title={footer.data.gmail}
+        >
+          <Gmail class="size-full" />
+        </FooterCard>
+        <FooterCard
+          link="https://www.linkedin.com/in/bryanag-kcts/"
+          title={footer.data.linkedin}
+        >
+          <Linkedin class="size-full" />
+        </FooterCard>
+      </div>
+      <p>2025 Kactuswow ❤️</p>
     </div>
-    <p>2025 Kactuswow ❤️</p>
-  </footer>
-</WidthLayout>
+  </WidthLayout>
+</footer>
