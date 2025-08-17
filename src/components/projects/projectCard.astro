@@ -1,0 +1,22 @@
+---
+import { Image } from 'astro:assets'
+import { Badge } from '@/components/ui/badge'
+
+interface Props {
+  title: string
+  image: ImageMetadata
+  description: string
+  skills: string[]
+}
+
+const { title, image, description, skills } = Astro.props
+---
+
+<div class="flex flex-col gap-2 flex-1 lg:flex-[1.5]">
+  <Image src={image} alt={title} class="flex-1 object-cover max-h-[50vh] rounded" />
+  <h2 class="font-bold font-[Poppins] text-3xl">{title}</h2>
+  <p>{description}</p>
+  <div class="flex flex-wrap gap-2">
+    {skills.map((skill) => <Badge variant="secondary">{skill}</Badge>)}
+  </div>
+</div>

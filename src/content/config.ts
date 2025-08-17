@@ -64,11 +64,20 @@ const experience = defineCollection({
   })
 })
 
+const projects = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    skills: z.array(z.string())
+  })
+})
+
 export const collections = {
   hero,
   stats,
   header,
   techStack,
   footer,
-  experience
+  experience,
+  projects
 }

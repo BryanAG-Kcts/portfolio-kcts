@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content'
+import kctsground from '@/assets/images/kctsground.png'
+import landing from '@/assets/images/landing.png'
+import sk from '@/assets/images/sk.png'
+import ProjectCard from '@/components/projects/projectCard.astro'
+import type { Languages } from '@/interfaces/i18n'
+import WidthLayout from '@/layout/widthLayout.astro'
+
+interface Props {
+  lang: Languages
+}
+
+const { lang } = Astro.props
+const [kctsgroundProject, landingProject, skProject] = await getCollection(
+  'projects',
+  ({ slug }) => slug.startsWith(lang)
+)
+---
+
+<WidthLayout size="xl">
+  <section class="flex flex-col gap-10 lg:flex-row">
+    <ProjectCard
+      title={skProject.data.title}
+      image={sk}
+      description={skProject.body}
+      skills={skProject.data.skills}
+    />
+    <div class="flex flex-col gap-10 md:flex-row lg:flex-col flex-1">
+      <ProjectCard
+        title={landingProject.data.title}
+        image={landing}
+        description={landingProject.body}
+        skills={landingProject.data.skills}
+      />
+      <ProjectCard
+        title={kctsgroundProject.data.title}
+        image={kctsground}
+        description={kctsgroundProject.body}
+        skills={kctsgroundProject.data.skills}
+      />
+    </div>
+  </section>
+</WidthLayout>

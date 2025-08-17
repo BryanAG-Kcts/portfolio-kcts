@@ -125,7 +125,7 @@ export const myFrontend: Technology[] = [
     level: 4
   },
   {
-    name: 'Javascript',
+    name: 'JavaScript',
     Logo: Javascript,
     level: 4
   },
@@ -198,7 +198,7 @@ export const myBackend: Technology[] = [
     level: 2
   },
   {
-    name: 'Typescript',
+    name: 'TypeScript',
     Logo: Typescript,
     level: 4
   }
