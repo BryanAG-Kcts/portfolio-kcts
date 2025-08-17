@@ -64,6 +64,14 @@ const experience = defineCollection({
   })
 })
 
+const certificates = defineCollection({
+  type: 'content',
+  schema: z.object({
+    link: z.string(),
+    approved: z.string()
+  })
+})
+
 const projects = defineCollection({
   type: 'content',
   schema: z.object({
@@ -79,5 +87,6 @@ export const collections = {
   techStack,
   footer,
   experience,
-  projects
+  projects,
+  certificates
 }

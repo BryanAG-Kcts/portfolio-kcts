@@ -1,4 +1,5 @@
 ---
+import { getCollection } from 'astro:content'
 import {
   Card,
   CardAction,
@@ -7,7 +8,18 @@ import {
   CardTitle
 } from '@/components/ui/card'
 import { certificates } from '@/constants/certificates'
+import type { Languages } from '@/interfaces/i18n'
 import WidthLayout from '@/layout/widthLayout.astro'
+
+interface Props {
+  lang: Languages
+}
+
+const { lang } = Astro.props
+const [certificate] = await getCollection(
+  'certificates',
+  ({ slug }) => slug === lang
+)
 ---
 
 <WidthLayout size="xl">
@@ -17,11 +29,17 @@ import WidthLayout from '@/layout/widthLayout.astro'
         certificates.map(({ link, name, school, Technology }) => (
           <Card className="relative overflow-hidden">
             <CardHeader>
-              <CardTitle className="font-bold font-[Poppins] leading-snug">{name}</CardTitle>
+              <CardTitle className="font-bold font-[Poppins] leading-snug">
+                {name}
+              </CardTitle>
               <CardDescription>
-                <p>{school} approval certificate</p>
-                <a href={'/certificates/' + link} target="_blank" class="underline">
-                  View Certificate
+                <p>{school} {certificate.data.approved}</p>
+                <a
+                  href={'/certificates/' + link}
+                  target="_blank"
+                  class="underline"
+                >
+                  {certificate.data.link}
                 </a>
               </CardDescription>
 
