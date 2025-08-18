@@ -1,5 +1,5 @@
 ---
-sub: My favorite technologies
+sub: 🤩 My favorite technologies
 frontend: Frontend
 backend: Backend
 learning: Learning
@@ -15,4 +15,4 @@ skillLevel:
   }
 ---
 
-My Tech stack
+Technologies and tools

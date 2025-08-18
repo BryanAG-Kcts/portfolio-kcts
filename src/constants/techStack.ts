@@ -142,7 +142,7 @@ export const myFrontend: Technology[] = [
   {
     name: 'React Router',
     Logo: ReactRouter,
-    level: 3
+    level: 2
   },
   {
     name: 'Shadcn UI',
@@ -180,7 +180,7 @@ export const myBackend: Technology[] = [
   {
     name: 'Mysql',
     Logo: Mysql,
-    level: 1
+    level: 2
   },
   {
     name: 'Nodejs',
