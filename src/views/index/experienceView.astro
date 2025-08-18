@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content'
 import { ChevronRight } from 'lucide-react'
 import ExperienceCard from '@/components/experience/experienceCard.astro'
 import type { Languages } from '@/interfaces/i18n'
+import SectionLayout from '@/layout/sectionLayout.astro'
 import WidthLayout from '@/layout/widthLayout.astro'
 
 interface Props {
@@ -10,14 +11,16 @@ interface Props {
 }
 
 const { lang } = Astro.props
-const experience = await getCollection('experience', ({ slug }) =>
-  slug.startsWith(lang)
+const [experience] = await getCollection(
+  'experience',
+  ({ slug }) => slug === lang
 )
 ---
 
 <WidthLayout size="sm">
-  <section class="grid grid-cols-[1fr_5fr] gap-y-20 relative">
-      {experience.map(({ data }, index) => (
+  <SectionLayout title={experience.body} sub={experience.data.sub}>
+    <section class="grid grid-cols-[1fr_5fr] gap-y-20 relative">
+      {experience.data.line.map((data, index) => (
         <div class="flex justify-center">
             <span class="size-10 rounded-full bg-primary z-10 flex items-center justify-center" >
                 <ChevronRight className="size-7 text-primary-foreground" />
@@ -27,6 +30,7 @@ const experience = await getCollection('experience', ({ slug }) =>
         <ExperienceCard {...data} />
     ))}
   </section>
+</SectionLayout>
 </WidthLayout>
 
 <style>

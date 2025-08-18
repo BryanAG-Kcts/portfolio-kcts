@@ -31,10 +31,12 @@ const header = defineCollection({
 const techStack = defineCollection({
   type: 'content',
   schema: z.object({
+    sub: z.string(),
     frontend: z.string(),
     backend: z.string(),
     learning: z.string(),
     tools: z.string(),
+    skillLevelText: z.string(),
     skillLevel: z.object({
       0: z.string(),
       1: z.string(),
@@ -51,16 +53,23 @@ const footer = defineCollection({
     github: z.string(),
     gmail: z.string(),
     linkedin: z.string(),
-    copyright: z.string()
+    copyright: z.string(),
+    title: z.string(),
+    sub: z.string()
   })
 })
 
 const experience = defineCollection({
   type: 'content',
   schema: z.object({
-    title: z.string(),
-    time: z.string(),
-    responsibilities: z.array(z.string())
+    sub: z.string(),
+    line: z.array(
+      z.object({
+        title: z.string(),
+        time: z.string(),
+        responsibilities: z.array(z.string())
+      })
+    )
   })
 })
 
@@ -68,15 +77,22 @@ const certificates = defineCollection({
   type: 'content',
   schema: z.object({
     link: z.string(),
-    approved: z.string()
+    approved: z.string(),
+    sub: z.string()
   })
 })
 
 const projects = defineCollection({
   type: 'content',
   schema: z.object({
-    title: z.string(),
-    skills: z.array(z.string())
+    sub: z.string(),
+    projects: z.array(
+      z.object({
+        title: z.string(),
+        skills: z.array(z.string()),
+        body: z.string()
+      })
+    )
   })
 })
 
@@ -85,6 +101,8 @@ const about = defineCollection({
   schema: z.object({
     cv: z.string(),
     contact: z.string(),
+    title: z.string(),
+    sub: z.string(),
     cards: z.array(
       z.object({
         title: z.string(),

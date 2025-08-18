@@ -9,6 +9,7 @@ import {
 } from '@/components/ui/card'
 import { certificates } from '@/constants/certificates'
 import type { Languages } from '@/interfaces/i18n'
+import SectionLayout from '@/layout/sectionLayout.astro'
 import WidthLayout from '@/layout/widthLayout.astro'
 
 interface Props {
@@ -23,33 +24,37 @@ const [certificate] = await getCollection(
 ---
 
 <WidthLayout size="xl">
-  <section>
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-      {
-        certificates.map(({ link, name, school, Technology }) => (
-          <Card className="relative overflow-hidden">
-            <CardHeader>
-              <CardTitle className="font-bold font-[Poppins] leading-snug">
-                {name}
-              </CardTitle>
-              <CardDescription>
-                <p>{school} {certificate.data.approved}</p>
-                <a
-                  href={'/certificates/' + link}
-                  target="_blank"
-                  class="underline"
-                >
-                  {certificate.data.link}
-                </a>
-              </CardDescription>
+  <SectionLayout title={certificate.body} sub={certificate.data.sub}>
+    <section>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        {
+          certificates.map(({ link, name, school, Technology }) => (
+            <Card className="relative overflow-hidden">
+              <CardHeader>
+                <CardTitle className="font-bold font-[Poppins] leading-snug">
+                  {name}
+                </CardTitle>
+                <CardDescription>
+                  <p>
+                    {school} {certificate.data.approved}
+                  </p>
+                  <a
+                    href={'/certificates/' + link}
+                    target="_blank"
+                    class="underline"
+                  >
+                    {certificate.data.link}
+                  </a>
+                </CardDescription>
 
-              <CardAction>
-                <Technology class="w-10 h-10 absolute bottom-0 right-0 -rotate-45 translate-x-1/12 translate-y-1/12 opacity-50" />
-              </CardAction>
-            </CardHeader>
-          </Card>
-        ))
-      }
-    </div>
-  </section>
+                <CardAction>
+                  <Technology class="w-10 h-10 absolute bottom-0 right-0 -rotate-45 translate-x-1/12 translate-y-1/12 opacity-50" />
+                </CardAction>
+              </CardHeader>
+            </Card>
+          ))
+        }
+      </div>
+    </section>
+  </SectionLayout>
 </WidthLayout>

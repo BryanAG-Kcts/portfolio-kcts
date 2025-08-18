@@ -1,6 +1,8 @@
 ---
-cv: 'Check my CV'
-contact: 'Contact me'
+title: Get to know me better
+sub: My principles
+cv: Check my CV
+contact: Contact me
 cards:
   [
     { title: 'Quality Focus', icon: 'quality', content: 'Lorem lorem lorem' },

@@ -5,6 +5,7 @@ import landing from '@/assets/images/landing.png'
 import sk from '@/assets/images/sk.png'
 import ProjectCard from '@/components/projects/projectCard.astro'
 import type { Languages } from '@/interfaces/i18n'
+import SectionLayout from '@/layout/sectionLayout.astro'
 import WidthLayout from '@/layout/widthLayout.astro'
 
 interface Props {
@@ -12,33 +13,34 @@ interface Props {
 }
 
 const { lang } = Astro.props
-const [kctsgroundProject, landingProject, skProject] = await getCollection(
-  'projects',
-  ({ slug }) => slug.startsWith(lang)
-)
+const [projects] = await getCollection('projects', ({ slug }) => slug === lang)
+
+const [kctsgroundProject, landingProject, skProject] = projects.data.projects
 ---
 
 <WidthLayout size="xl">
-  <section class="flex flex-col gap-10 lg:flex-row">
-    <ProjectCard
-      title={skProject.data.title}
-      image={sk}
-      description={skProject.body}
-      skills={skProject.data.skills}
-    />
-    <div class="flex flex-col gap-10 md:flex-row lg:flex-col flex-1">
+  <SectionLayout title={projects.body} sub={projects.data.sub}>
+    <section class="flex flex-col gap-10 lg:flex-row">
       <ProjectCard
-        title={landingProject.data.title}
-        image={landing}
-        description={landingProject.body}
-        skills={landingProject.data.skills}
+        title={skProject.title}
+        image={sk}
+        description={skProject.body}
+        skills={skProject.skills}
       />
-      <ProjectCard
-        title={kctsgroundProject.data.title}
-        image={kctsground}
-        description={kctsgroundProject.body}
-        skills={kctsgroundProject.data.skills}
-      />
-    </div>
-  </section>
+      <div class="flex flex-col gap-10 md:flex-row lg:flex-col flex-1">
+        <ProjectCard
+          title={landingProject.title}
+          image={landing}
+          description={landingProject.body}
+          skills={landingProject.skills}
+        />
+        <ProjectCard
+          title={kctsgroundProject.title}
+          image={kctsground}
+          description={kctsgroundProject.body}
+          skills={kctsgroundProject.skills}
+        />
+      </div>
+    </section>
+  </SectionLayout>
 </WidthLayout>

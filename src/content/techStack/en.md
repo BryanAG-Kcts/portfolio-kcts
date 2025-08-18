@@ -1,8 +1,10 @@
 ---
-frontend: 'Frontend'
-backend: 'Backend'
-learning: 'Learning'
-tools: 'Tools'
+sub: My favorite technologies
+frontend: Frontend
+backend: Backend
+learning: Learning
+tools: Tools
+skillLevelText: My skill level is
 skillLevel:
   {
     0: 'Studying or interested 👀',
@@ -13,4 +15,4 @@ skillLevel:
   }
 ---
 
-My skill level is
+My Tech stack

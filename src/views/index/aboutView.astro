@@ -4,6 +4,7 @@ import AboutCard from '@/components/about/aboutCard.astro'
 import { LinkButton } from '@/components/ui/linkButton'
 import { iconCards } from '@/constants/about'
 import type { Languages } from '@/interfaces/i18n'
+import SectionLayout from '@/layout/sectionLayout.astro'
 import WidthLayout from '@/layout/widthLayout.astro'
 
 interface Props {
@@ -16,7 +17,8 @@ const { Content } = await about.render()
 ---
 
 <WidthLayout size="xl">
-  <section class="flex flex-col gap-10 lg:flex-row">
+ <SectionLayout title={about.data.title} sub={about.data.sub}>
+   <section class="flex flex-col gap-10 lg:flex-row">
     <div class="flex flex-col gap-4 text-lg flex-1 leading-relaxed max-w-prose">
       <Content />
       <div class="flex gap-4">
@@ -41,4 +43,5 @@ const { Content } = await about.render()
       }
     </div>
   </section>
+ </SectionLayout>
 </WidthLayout>
