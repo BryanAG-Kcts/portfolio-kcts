@@ -1,6 +1,6 @@
 ---
-number: 16
+number: 30
 suffix: '+'
 ---
 
-Technologies acquired
+Acquired technologies

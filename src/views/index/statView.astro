@@ -22,9 +22,11 @@ const stats = await getCollection('stats', ({ slug }) => slug.startsWith(lang))
             countOptions={{
               end: stat.data.number,
               ref: stat.slug,
-              suffix: stat.data.suffix
+              suffix: stat.data.suffix,
+              delay: 0.5,
+              duration: 2
             }}
-            className="counter text-2xl"
+            className="counter text-2xl md:text-4xl"
           />
         </StatCard>
       ))

@@ -3,4 +3,4 @@ number: 1
 suffix: '~'
 ---
 
-Year experience
+Years of experience
