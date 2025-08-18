@@ -1,29 +1,28 @@
 ---
-sub: see my progression
+sub: 💼 My Career Overview
 line:
   [
     {
-      title: Software Developer,
-      time: 'January 2022',
+      title: Frontend Developer,
+      time: January 2022,
       responsibilities:
         [
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-          'Lorem lorem lorem'
+          "I developed the company's entire website, improving usability on mobile devices, enhancing the user experience, and significantly reducing response times compared to the previous version.",
+          I integrated a REST API into the system to support the page's services.',
+          'Responsible for website support and maintenance, performing performance metric analysis and applying local SEO techniques to improve search engine rankings.'
         ]
     },
     {
-      title: System Engineer,
-      time: 'January 2021 - Present',
+      title: Systems Engineer,
+      time: January 2021,
       responsibilities:
         [
-          'Design and implement system architectures',
-          'Collaborate with cross-functional teams to deliver high-quality software solutions',
-          'Stay up-to-date with emerging technologies and industry best practices',
-          'Provide technical support and troubleshooting for system failures',
-          'Contribute to the development of new features and enhancements'
+          'I am responsible for promoting my professional development, staying up-to-date with emerging technologies and industry best practices, always striving to be a great person and an excellent engineer.',
+          'I have participated in cultural integration, multidisciplinary, and international events, strengthening my engineering skills and my ability to work in diverse environments.',
+          'I have conducted technological research and development, applying modern knowledge and innovative systems engineering techniques, aimed at generating real value.'
         ]
     }
   ]
 ---
 
-My professional career
+Achievements and experience
