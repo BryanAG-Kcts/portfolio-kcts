@@ -22,7 +22,7 @@ const [experience] = await getCollection(
 
 <WidthLayout size="sm">
   <SectionLayout title={experience.body} sub={experience.data.sub}>
-    <section class="grid grid-cols-[1fr_5fr] gap-y-20 relative">
+    <section id="experience" class="grid grid-cols-[1fr_5fr] gap-y-20 relative">
       {experience.data.line.map((data, index) => (
         <div class="flex justify-center">
             <span class="size-10 rounded-full bg-primary z-10 flex items-center justify-center time-line-point" >

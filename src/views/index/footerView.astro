@@ -20,7 +20,7 @@ const [footer] = await getCollection('footer', ({ slug }) => slug === lang)
   <SectionLayout title={footer.data.title} sub={footer.data.sub}>
     <FooterCanvas client:visible />
 
-    <div class="p-4 gap-4 grid grid-cols-1 justify-items-center sm:grid-cols-3">
+    <div id="contact" class="p-4 gap-4 grid grid-cols-1 justify-items-center sm:grid-cols-3">
       <p>{footer.body}</p>
       <div class="flex gap-4">
         <FooterCard

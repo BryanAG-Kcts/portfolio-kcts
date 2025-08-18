@@ -22,7 +22,7 @@ const [tech] = await getCollection('techStack', ({ slug }) => slug === lang)
 
 <WidthLayout size="sm">
   <SectionLayout title={tech.body} sub={tech.data.sub}>
-    <section class="grid grid-cols-1 gap-7 sm:grid-cols-2">
+    <section id="tech-stack" class="grid grid-cols-1 gap-7 sm:grid-cols-2">
     <div class="flex flex-col items-center gap-4">
       <h2 class="text-2xl font-bold font-[Poppins]">{tech.data.frontend}</h2>
 

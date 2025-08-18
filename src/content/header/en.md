@@ -2,10 +2,10 @@
 contact: Contact me
 sections:
   [
-    { link: '#hero', name: Home },
-    { link: '#about', name: About },
+    { link: '#experience', name: Experience },
     { link: '#projects', name: Projects },
-    { link: '#contact', name: Contact }
+    {link: '#tech-stack', name: Stack},
+    { link: '#about', name: About }
   ]
 ---
 

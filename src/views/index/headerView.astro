@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content'
+import { Theme } from '@/components/header/theme'
 import { LinkButton } from '@/components/ui/linkButton'
 import type { Languages } from '@/interfaces/i18n'
 
@@ -32,9 +33,13 @@ const [header] = await getCollection('header', ({ slug }) => slug === lang)
     }
   </nav>
 
-  <LinkButton href="#contact">
-    {header.data.contact}
-  </LinkButton>
+  <div class="flex items-center gap-2">
+    <LinkButton href="#contact">
+      {header.data.contact}
+    </LinkButton>
+
+    <Theme client:idle />
+  </div>
 </header>
 
 <script>
