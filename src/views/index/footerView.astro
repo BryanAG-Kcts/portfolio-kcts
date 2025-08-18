@@ -7,7 +7,6 @@ import { FooterCanvas } from '@/components/footer/footerCanvas'
 import { FooterCard } from '@/components/footer/footerCard'
 import type { Languages } from '@/interfaces/i18n'
 import SectionLayout from '@/layout/sectionLayout.astro'
-import WidthLayout from '@/layout/widthLayout.astro'
 
 interface Props {
   lang: Languages
@@ -18,36 +17,32 @@ const [footer] = await getCollection('footer', ({ slug }) => slug === lang)
 ---
 
 <footer class="mt-10">
-<SectionLayout title={footer.data.title} sub={footer.data.sub}>
+  <SectionLayout title={footer.data.title} sub={footer.data.sub}>
     <FooterCanvas client:visible />
 
-    <WidthLayout size="xl">
-      <div
-        class="p-4 gap-4 grid grid-cols-1 justify-items-center sm:grid-cols-3"
-      >
-        <p>{footer.body}</p>
-        <div class="flex gap-4">
-          <FooterCard
-            link="https://github.com/bryanag_kcts"
-            title={footer.data.github}
-          >
-            <Github class="size-full" />
-          </FooterCard>
-          <FooterCard
-            link="mailto:bryanag.kcts@gmail.com"
-            title={footer.data.gmail}
-          >
-            <Gmail class="size-full" />
-          </FooterCard>
-          <FooterCard
-            link="https://www.linkedin.com/in/bryanag-kcts/"
-            title={footer.data.linkedin}
-          >
-            <Linkedin class="size-full" />
-          </FooterCard>
-        </div>
-        <p>2025 Kactuswow ❤️</p>
+    <div class="p-4 gap-4 grid grid-cols-1 justify-items-center sm:grid-cols-3">
+      <p>{footer.body}</p>
+      <div class="flex gap-4">
+        <FooterCard
+          link="https://github.com/bryanag_kcts"
+          title={footer.data.github}
+        >
+          <Github class="size-full" />
+        </FooterCard>
+        <FooterCard
+          link="mailto:bryanag.kcts@gmail.com"
+          title={footer.data.gmail}
+        >
+          <Gmail class="size-full" />
+        </FooterCard>
+        <FooterCard
+          link="https://www.linkedin.com/in/bryanag-kcts/"
+          title={footer.data.linkedin}
+        >
+          <Linkedin class="size-full" />
+        </FooterCard>
       </div>
-    </WidthLayout>
+      <p>2025 Kactuswow ❤️</p>
+    </div>
   </SectionLayout>
 </footer>

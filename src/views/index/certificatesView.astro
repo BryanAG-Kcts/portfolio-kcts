@@ -11,6 +11,7 @@ import { certificates } from '@/constants/certificates'
 import type { Languages } from '@/interfaces/i18n'
 import SectionLayout from '@/layout/sectionLayout.astro'
 import WidthLayout from '@/layout/widthLayout.astro'
+import { YScrollFadeIn } from '@/components/animation/scrollFadeIn'
 
 interface Props {
   lang: Languages
@@ -29,7 +30,7 @@ const [certificate] = await getCollection(
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
         {
           certificates.map(({ link, name, school, Technology }) => (
-            <Card className="relative overflow-hidden">
+            <Card className="relative overflow-hidden certificate-card">
               <CardHeader>
                 <CardTitle className="font-bold font-[Poppins] leading-snug">
                   {name}
@@ -58,3 +59,5 @@ const [certificate] = await getCollection(
     </section>
   </SectionLayout>
 </WidthLayout>
+
+<YScrollFadeIn client:only="react" elementClass=".certificate-card" duration={0.5} />

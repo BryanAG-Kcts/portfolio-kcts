@@ -10,6 +10,7 @@ import {
 import type { Languages } from '@/interfaces/i18n'
 import SectionLayout from '@/layout/sectionLayout.astro'
 import WidthLayout from '@/layout/widthLayout.astro'
+import { YScrollFadeIn } from '@/components/animation/scrollFadeIn'
 
 interface Props {
   lang: Languages
@@ -64,3 +65,5 @@ const [tech] = await getCollection('techStack', ({ slug }) => slug === lang)
   </section>
   </SectionLayout>
 </WidthLayout>
+
+<YScrollFadeIn client:only="react" elementClass=".tech-stack-card" duration={0.5} />
