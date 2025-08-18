@@ -13,14 +13,18 @@ const { title, image, description, skills } = Astro.props
 ---
 
 <div class="flex flex-col gap-2 flex-1 lg:flex-[1.5] project-card">
-  <Image
-    src={image}
-    alt={title}
-    class="flex-1 object-cover max-h-[50vh] rounded"
-  />
+  <picture
+    class="max-h-[70vh] rounded-3xl overflow-hidden p-3 bg-secondary lg:flex-1"
+  >
+    <Image
+      src={image}
+      alt={title}
+      class="object-cover size-full rounded-xl dark:brightness-50"
+    />
+  </picture>
   <h2 class="font-bold font-[Poppins] text-3xl">{title}</h2>
   <p>{description}</p>
-  <div class="flex flex-wrap gap-2">
+  <div class="flex flex-wrap gap-2 mt-1">
     {skills.map((skill) => <Badge variant="secondary">{skill}</Badge>)}
   </div>
 </div>

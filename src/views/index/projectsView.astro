@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
 import kctsground from '@/assets/images/kctsground.png'
-import landing from '@/assets/images/landing.png'
+import scripta from '@/assets/images/scripta.png'
 import sk from '@/assets/images/sk.png'
 import { YScrollFadeIn } from '@/components/animation/scrollFadeIn'
 import ProjectCard from '@/components/projects/projectCard.astro'
@@ -16,7 +16,7 @@ interface Props {
 const { lang } = Astro.props
 const [projects] = await getCollection('projects', ({ slug }) => slug === lang)
 
-const [kctsgroundProject, landingProject, skProject] = projects.data.projects
+const [kctsgroundProject, scriptaProject, skProject] = projects.data.projects
 ---
 
 <WidthLayout size="xl">
@@ -30,10 +30,10 @@ const [kctsgroundProject, landingProject, skProject] = projects.data.projects
       />
       <div class="flex flex-col gap-10 md:flex-row lg:flex-col flex-1">
         <ProjectCard
-          title={landingProject.title}
-          image={landing}
-          description={landingProject.body}
-          skills={landingProject.skills}
+          title={scriptaProject.title}
+          image={scripta}
+          description={scriptaProject.body}
+          skills={scriptaProject.skills}
         />
         <ProjectCard
           title={kctsgroundProject.title}

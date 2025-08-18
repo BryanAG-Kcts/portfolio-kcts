@@ -1,5 +1,5 @@
 ---
-sub: 💼 My Career Overview
+sub: 💼 My career overview
 line:
   [
     {
@@ -25,4 +25,4 @@ line:
   ]
 ---
 
-Achievements and experience
+Achievements and Experience
