@@ -15,4 +15,4 @@ skillLevel:
   }
 ---
 
-Technologies and tools
+Technologies and Tools

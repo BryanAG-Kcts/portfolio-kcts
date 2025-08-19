@@ -4,4 +4,4 @@ approved: approves this certificate
 sub: 📄 Certificates that endorse my knowledge
 ---
 
-Certificates and shares
+Certificates and Shares

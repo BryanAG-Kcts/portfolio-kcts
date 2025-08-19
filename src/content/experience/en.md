@@ -14,7 +14,7 @@ line:
     },
     {
       title: Systems Engineer,
-      time: January 2021,
+      time: January 2021 - Present,
       responsibilities:
         [
           'I am responsible for promoting my professional development, staying up-to-date with emerging technologies and industry best practices, always striving to be a great person and an excellent engineer.',
