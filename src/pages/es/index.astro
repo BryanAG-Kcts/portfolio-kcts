@@ -1,12 +1,31 @@
 ---
 import BaseLayout from '@/layout/baseLayout.astro'
+import AboutView from '@/views/index/aboutView.astro'
+import CertificatesView from '@/views/index/certificatesView.astro'
+import ExperienceView from '@/views/index/experienceView.astro'
+import FooterView from '@/views/index/footerView.astro'
+import HeaderView from '@/views/index/headerView.astro'
+import HeroView from '@/views/index/heroView.astro'
+import ProjectsView from '@/views/index/projectsView.astro'
+import StatView from '@/views/index/statView.astro'
+import TechStackView from '@/views/index/techStackView.astro'
+
+const lang = 'en'
 ---
 
 <BaseLayout
-  title="Inicio"
-  lang="es"
-  description="Pagina de inicio"
+  title="Home"
+  lang={lang}
+  description="Home page"
   keywords={['home', 'portfolio', 'kcts']}
 >
-  <h1>Inicio</h1>
+  <HeaderView lang={lang} />
+  <HeroView lang={lang} />
+  <StatView lang={lang} />
+  <ExperienceView lang={lang} />
+  <ProjectsView lang={lang} />
+  <TechStackView lang={lang} />
+  <AboutView lang={lang} />
+  <CertificatesView lang={lang} />
+  <FooterView lang={lang} />
 </BaseLayout>
