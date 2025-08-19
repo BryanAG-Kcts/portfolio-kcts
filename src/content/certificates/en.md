@@ -1,7 +1,7 @@
 ---
-link: View Certificate
-approved: approval certificate
-sub: certificates that endorse my knowledge
+link: View certificate
+approved: approves this certificate
+sub: 📄 Certificates that endorse my knowledge
 ---
 
-My certifications
+Certificates and shares

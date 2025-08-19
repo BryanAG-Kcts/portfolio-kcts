@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content'
+import { YScrollFadeIn } from '@/components/animation/scrollFadeIn'
 import {
   Card,
   CardAction,
@@ -11,7 +12,6 @@ import { certificates } from '@/constants/certificates'
 import type { Languages } from '@/interfaces/i18n'
 import SectionLayout from '@/layout/sectionLayout.astro'
 import WidthLayout from '@/layout/widthLayout.astro'
-import { YScrollFadeIn } from '@/components/animation/scrollFadeIn'
 
 interface Props {
   lang: Languages
@@ -42,7 +42,7 @@ const [certificate] = await getCollection(
                   <a
                     href={'/certificates/' + link}
                     target="_blank"
-                    class="underline"
+                    class="underline inline-block mt-1 transition-transform hover:scale-95"
                   >
                     {certificate.data.link}
                   </a>
@@ -60,4 +60,8 @@ const [certificate] = await getCollection(
   </SectionLayout>
 </WidthLayout>
 
-<YScrollFadeIn client:only="react" elementClass=".certificate-card" duration={0.5} />
+<YScrollFadeIn
+  client:only="react"
+  elementClass=".certificate-card"
+  duration={0.5}
+/>
