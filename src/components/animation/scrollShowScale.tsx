@@ -23,7 +23,7 @@ export function ScrollShowScale({ elementClass }: Props) {
           scrollTrigger: {
             trigger: card,
             start: 'top 70%',
-            toggleActions: 'play none none reverse',
+            toggleActions: 'play none none reverse'
           }
         }
       )

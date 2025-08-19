@@ -13,7 +13,10 @@ export function Theme() {
   }
 
   return (
-    <Button onClick={handleDark} variant='secondary' className='cursor-pointer'>
+    <Button
+      onClick={handleDark}
+      variant='secondary'
+      className='cursor-pointer'>
       <Logo />
     </Button>
   )

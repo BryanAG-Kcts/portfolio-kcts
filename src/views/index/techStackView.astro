@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content'
+import { YScrollFadeIn } from '@/components/animation/scrollFadeIn'
 import TechCards from '@/components/techStack/techCards.astro'
 import {
   myBackend,
@@ -10,7 +11,6 @@ import {
 import type { Languages } from '@/interfaces/i18n'
 import SectionLayout from '@/layout/sectionLayout.astro'
 import WidthLayout from '@/layout/widthLayout.astro'
-import { YScrollFadeIn } from '@/components/animation/scrollFadeIn'
 
 interface Props {
   lang: Languages

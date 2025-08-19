@@ -9,7 +9,7 @@ interface Props {
   elementClass: string
 }
 
-export function ScrollShow({ elementClass}: Props) {
+export function ScrollShow({ elementClass }: Props) {
   useGSAP(() => {
     const cards = gsap.utils.toArray(elementClass) as string[]
     cards.forEach(card => {
