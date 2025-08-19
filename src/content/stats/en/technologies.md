@@ -1,6 +1,6 @@
 ---
 number: 30
-suffix: '+'
+suffix: +
 ---
 
 Acquired technologies

@@ -1,6 +1,6 @@
 ---
 number: 35
-suffix: '+'
+suffix: +
 ---
 
 Approved certificates

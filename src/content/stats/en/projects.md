@@ -1,6 +1,6 @@
 ---
 number: 15
-suffix: '+'
+suffix: +
 ---
 
 Projects carried out
