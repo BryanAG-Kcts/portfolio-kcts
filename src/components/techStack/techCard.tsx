@@ -12,7 +12,7 @@ export function TechCard({ children, name, level, textLevel }: Props) {
   return (
     <HoverCard openDelay={400}>
       <HoverCardTrigger asChild>
-        <Card className='tech-stack-card'>
+        <Card>
           <CardContent>{children}</CardContent>
         </Card>
       </HoverCardTrigger>

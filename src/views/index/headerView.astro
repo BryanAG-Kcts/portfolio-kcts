@@ -44,13 +44,17 @@ const [header] = await getCollection('header', ({ slug }) => slug === lang)
 
 <script>
   const header = document.querySelector('header')
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
-      header?.classList.add('bg-background')
-    } else {
-      header?.classList.remove('bg-background')
-    }
-  })
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (window.scrollY > 10) {
+        header?.classList.add('bg-background')
+      } else {
+        header?.classList.remove('bg-background')
+      }
+    },
+    { passive: true }
+  )
 </script>
 
 <style>

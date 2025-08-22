@@ -20,7 +20,8 @@ const { technologies, skillLevel, textLevel } = Astro.props
 <div class="grid grid-cols-3 justify-items-center gap-4">
   {
     technologies.map((technology) => (
-      <TechCard
+      <div class="tech-stack-card">
+        <TechCard
         client:visible
         name={technology.name}
         level={skillLevel[technology.level]}
@@ -28,6 +29,7 @@ const { technologies, skillLevel, textLevel } = Astro.props
       >
         <technology.Logo class="w-10 h-10" aria-label={technology.name} />
       </TechCard>
+      </div>
     ))
   }
 </div>
