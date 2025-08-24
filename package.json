@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",
+    "@astrojs/sitemap": "^3.5.1",
     "@fontsource/poppins": "^5.2.6",
     "@fontsource/quicksand": "^5.2.8",
     "@gsap/react": "^2.1.2",
