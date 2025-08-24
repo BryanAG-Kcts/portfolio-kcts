@@ -1,0 +1,44 @@
+---
+import { Circle } from 'lucide-react'
+import { Counter } from '../ui/counter'
+
+interface Props {
+  insights: string[]
+}
+
+const { insights } = Astro.props
+---
+
+<div class="grid grid-cols-2 gap-2 gap-y-14">
+  {
+    insights.map((insight) => (
+      <div class="text-center">
+        <span class="relative text-green-500 flex flex-col justify-center items-center mb-1">
+          <Circle
+            className="size-28 sm:size-44 insight-circle-load"
+            strokeDasharray="360"
+            strokeDashoffset="360"
+            strokeWidth="1.25"
+          />
+          <p class="absolute text-xl sm:text-3xl font-[Poppins] font-bold">
+            <Counter
+              client:visible
+              countOptions={{
+                end: 100,
+                ref: `${insight}-card`,
+                delay: 0.5,
+                enableScrollSpy: true
+              }}
+            />
+          </p>
+        </span>
+        <p>{insight}</p>
+      </div>
+    ))
+  }
+</div>
+
+<script>
+  import { insightCircles } from '@/constants/animation/insightCircles'
+  insightCircles()
+</script>

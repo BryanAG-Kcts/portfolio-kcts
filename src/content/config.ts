@@ -113,6 +113,14 @@ const about = defineCollection({
   })
 })
 
+const insights = defineCollection({
+  type: 'content',
+  schema: z.object({
+    sub: z.string(),
+    insights: z.array(z.string())
+  })
+})
+
 export const collections = {
   hero,
   stats,
@@ -122,5 +130,6 @@ export const collections = {
   experience,
   projects,
   certificates,
-  about
+  about,
+  insights
 }

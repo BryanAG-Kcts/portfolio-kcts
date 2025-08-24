@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content'
+import InsightCircles from '@/components/insights/insightCircles.astro'
+import type { Languages } from '@/interfaces/i18n'
+import SectionLayout from '@/layout/sectionLayout.astro'
+import WidthLayout from '@/layout/widthLayout.astro'
+
+interface Props {
+  lang: Languages
+}
+
+const { lang } = Astro.props
+const [insights] = await getCollection('insights', ({ slug }) => slug === lang)
+---
+
+<WidthLayout size="sm">
+  <SectionLayout title={insights.body} sub={insights.data.sub}>
+    <section>
+      <InsightCircles insights={insights.data.insights} />
+    </section>
+  </SectionLayout>
+</WidthLayout>
