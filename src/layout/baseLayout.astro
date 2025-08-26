@@ -64,15 +64,8 @@ const { title, lang, description, keywords } = Astro.props
 
     <!-- Astro generator -->
     <meta name="generator" content={Astro.generator} />
-
-    <!-- Default font -->
-    <style>
-      body {
-        font-family: 'Quicksand', sans-serif;
-      }
-    </style>
   </head>
-  <body class="dark">
+  <body class="font-[Quicksand] dark">
     <slot />
   </body>
 </html>
