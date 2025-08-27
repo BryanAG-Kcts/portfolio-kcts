@@ -3,7 +3,6 @@ import { getCollection } from 'astro:content'
 import kctsground from '@/assets/images/kctsground.png'
 import scripta from '@/assets/images/scripta.png'
 import sk from '@/assets/images/sk.png'
-import { YScrollFadeIn } from '@/components/animation/scrollFadeIn'
 import ProjectCard from '@/components/projects/projectCard.astro'
 import type { Languages } from '@/interfaces/i18n'
 import SectionLayout from '@/layout/sectionLayout.astro'
@@ -46,4 +45,7 @@ const [kctsgroundProject, scriptaProject, skProject] = projects.data.projects
   </SectionLayout>
 </WidthLayout>
 
-<YScrollFadeIn client:only="react" elementClass=".project-card" duration={1} />
+<script>
+  import { yScrollFadeIn } from '@/constants/animation/scrollFadeIn'
+  yScrollFadeIn('.project-card', 1)
+</script>

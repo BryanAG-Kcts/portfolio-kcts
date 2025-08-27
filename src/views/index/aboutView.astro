@@ -1,7 +1,6 @@
 ---
 import { getCollection } from 'astro:content'
 import AboutCard from '@/components/about/aboutCard.astro'
-import { XScrollFadeIn } from '@/components/animation/scrollFadeIn'
 import { LinkButton } from '@/components/ui/linkButton'
 import { iconCards } from '@/constants/about'
 import type { Languages } from '@/interfaces/i18n'
@@ -19,7 +18,10 @@ const { Content } = await about.render()
 
 <WidthLayout size="xl">
   <SectionLayout title={about.data.title} sub={about.data.sub}>
-    <section id="about" class="flex flex-col gap-10 lg:flex-row overflow-hidden">
+    <section
+      id="about"
+      class="flex flex-col gap-10 lg:flex-row overflow-hidden"
+    >
       <div
         class="flex flex-col gap-4 text-lg flex-1 leading-relaxed max-w-prose about-me-prose"
       >
@@ -49,14 +51,8 @@ const { Content } = await about.render()
   </SectionLayout>
 </WidthLayout>
 
-<XScrollFadeIn
-  client:only="react"
-  elementClass=".about-me-prose"
-  duration={1.5}
-  invert
-/>
-<XScrollFadeIn
-  client:only="react"
-  elementClass=".about-me-card"
-  duration={1.5}
-/>
+<script>
+  import { xScrollFadeIn } from '@/constants/animation/scrollFadeIn'
+  xScrollFadeIn('.about-me-prose', 1.5, true)
+  xScrollFadeIn('.about-me-card', 1.5)
+</script>

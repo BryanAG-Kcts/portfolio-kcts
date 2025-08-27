@@ -1,9 +1,6 @@
 ---
 import { getCollection } from 'astro:content'
 import { ChevronRight } from 'lucide-react'
-import { XScrollFadeIn } from '@/components/animation/scrollFadeIn'
-import { ScrollShow } from '@/components/animation/scrollShow'
-import { ScrollShowScale } from '@/components/animation/scrollShowScale'
 import ExperienceCard from '@/components/experience/experienceCard.astro'
 import type { Languages } from '@/interfaces/i18n'
 import SectionLayout from '@/layout/sectionLayout.astro'
@@ -36,11 +33,6 @@ const [experience] = await getCollection(
 </SectionLayout>
 </WidthLayout>
 
-<XScrollFadeIn client:only="react" elementClass=".experience-card" duration={1.5} />
-<ScrollShow client:only="react" elementClass=".time-line-item" />
-<ScrollShowScale client:only="react" elementClass=".time-line-point" />
-
-
 <style>
 .gradient-line {
   background: linear-gradient(
@@ -52,3 +44,12 @@ const [experience] = await getCollection(
   );
 }
 </style>
+
+<script>
+  import { scrollShowScale } from "@/constants/animation/scrollShowScale";
+  import { scrollShow } from "@/constants/animation/scrollShow";
+  import { xScrollFadeIn } from "@/constants/animation/scrollFadeIn";
+  scrollShowScale('.time-line-point')
+  scrollShow('.time-line-item')
+  xScrollFadeIn('.experience-card', 1.5)
+</script>

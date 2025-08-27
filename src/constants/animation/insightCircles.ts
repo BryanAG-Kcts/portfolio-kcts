@@ -11,7 +11,7 @@ export function insightCircles() {
         trigger: circle,
         start: 'top 80%',
         end: 'bottom -80%',
-        scrub: 3
+        scrub: 2
       }
     })
   })

@@ -60,8 +60,7 @@ const [certificate] = await getCollection(
   </SectionLayout>
 </WidthLayout>
 
-<YScrollFadeIn
-  client:only="react"
-  elementClass=".certificate-card"
-  duration={0.5}
-/>
+<script>
+  import { yScrollFadeIn } from '@/constants/animation/scrollFadeIn'
+  yScrollFadeIn('.certificate-card', 0.5)
+</script>

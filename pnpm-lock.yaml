@@ -20,9 +20,6 @@ importers:
       '@fontsource/quicksand':
         specifier: ^5.2.8
         version: 5.2.8
-      '@gsap/react':
-        specifier: ^2.1.2
-        version: 2.1.2(gsap@3.13.0)(react@19.1.1)
       '@radix-ui/react-hover-card':
         specifier: ^1.1.15
         version: 1.1.15(@types/react-dom@19.1.7(@types/react@19.1.9))(@types/react@19.1.9)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -451,12 +448,6 @@ packages:
 
   '@fontsource/quicksand@5.2.8':
     resolution: {integrity: sha512-YRgnt2eQfNrk5OWqYJZmFoi6B6sioRIbjKJj3/l5CnezeE0TzD8XL35Q4fRNfHLpOzLi/ckNvTZySBHVVP1G6w==}
-
-  '@gsap/react@2.1.2':
-    resolution: {integrity: sha512-JqliybO1837UcgH2hVOM4VO+38APk3ECNrsuSM4MuXp+rbf+/2IG2K1YJiqfTcXQHH7XlA0m3ykniFYstfq0Iw==}
-    peerDependencies:
-      gsap: ^3.12.5
-      react: '>=17'
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -3006,11 +2997,6 @@ snapshots:
   '@fontsource/poppins@5.2.6': {}
 
   '@fontsource/quicksand@5.2.8': {}
-
-  '@gsap/react@2.1.2(gsap@3.13.0)(react@19.1.1)':
-    dependencies:
-      gsap: 3.13.0
-      react: 19.1.1
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:

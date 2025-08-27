@@ -23,47 +23,50 @@ const [tech] = await getCollection('techStack', ({ slug }) => slug === lang)
 <WidthLayout size="sm">
   <SectionLayout title={tech.body} sub={tech.data.sub}>
     <section id="tech-stack" class="grid grid-cols-1 gap-7 sm:grid-cols-2">
-    <div class="flex flex-col items-center gap-4">
-      <h2 class="text-2xl font-bold font-[Poppins]">{tech.data.frontend}</h2>
+      <div class="flex flex-col items-center gap-4">
+        <h2 class="text-2xl font-bold font-[Poppins]">{tech.data.frontend}</h2>
 
-      <TechCards
-        technologies={myFrontend}
-        skillLevel={tech.data.skillLevel}
-        textLevel={tech.data.skillLevelText}
-      />
-    </div>
+        <TechCards
+          technologies={myFrontend}
+          skillLevel={tech.data.skillLevel}
+          textLevel={tech.data.skillLevelText}
+        />
+      </div>
 
-    <div class="flex flex-col items-center gap-4">
-      <h2 class="text-2xl font-bold font-[Poppins]">{tech.data.backend}</h2>
+      <div class="flex flex-col items-center gap-4">
+        <h2 class="text-2xl font-bold font-[Poppins]">{tech.data.backend}</h2>
 
-      <TechCards
-        technologies={myBackend}
-        skillLevel={tech.data.skillLevel}
-        textLevel={tech.data.skillLevelText}
-      />
-    </div>
+        <TechCards
+          technologies={myBackend}
+          skillLevel={tech.data.skillLevel}
+          textLevel={tech.data.skillLevelText}
+        />
+      </div>
 
-    <div class="flex flex-col items-center gap-4">
-      <h2 class="text-2xl font-bold font-[Poppins]">{tech.data.learning}</h2>
+      <div class="flex flex-col items-center gap-4">
+        <h2 class="text-2xl font-bold font-[Poppins]">{tech.data.learning}</h2>
 
-      <TechCards
-        technologies={myLearning}
-        skillLevel={tech.data.skillLevel}
-        textLevel={tech.data.skillLevelText}
-      />
-    </div>
+        <TechCards
+          technologies={myLearning}
+          skillLevel={tech.data.skillLevel}
+          textLevel={tech.data.skillLevelText}
+        />
+      </div>
 
-    <div class="flex flex-col items-center gap-4">
-      <h2 class="text-2xl font-bold font-[Poppins]">{tech.data.tools}</h2>
+      <div class="flex flex-col items-center gap-4">
+        <h2 class="text-2xl font-bold font-[Poppins]">{tech.data.tools}</h2>
 
-      <TechCards
-        technologies={myTools}
-        skillLevel={tech.data.skillLevel}
-        textLevel={tech.data.skillLevelText}
-      />
-    </div>
-  </section>
+        <TechCards
+          technologies={myTools}
+          skillLevel={tech.data.skillLevel}
+          textLevel={tech.data.skillLevelText}
+        />
+      </div>
+    </section>
   </SectionLayout>
 </WidthLayout>
 
-<YScrollFadeIn client:only="react" elementClass=".tech-stack-card" duration={0.5} />
+<script>
+  import { yScrollFadeIn } from '@/constants/animation/scrollFadeIn'
+  yScrollFadeIn('.tech-stack-card', 0.5)
+</script>
