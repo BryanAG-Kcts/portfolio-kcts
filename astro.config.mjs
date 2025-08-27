@@ -10,7 +10,18 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  integrations: [react(), sitemap()],
+  integrations: [
+    react(),
+    sitemap({
+      i18n: {
+        defaultLocale: 'en',
+        locales: {
+          en: 'en',
+          es: 'es'
+        }
+      }
+    })
+  ],
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'es'],
