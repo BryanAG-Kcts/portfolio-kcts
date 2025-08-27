@@ -28,5 +28,11 @@ export default defineConfig({
     routing: {
       prefixDefaultLocale: true
     }
+  },
+  redirects: {
+    '/sitemap.xml': {
+      status: 301,
+      destination: '/sitemap-index.xml'
+    }
   }
 })
