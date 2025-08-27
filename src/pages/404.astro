@@ -1,0 +1,21 @@
+---
+import { HeroBackground } from '@/components/hero/heroBackground'
+import BaseLayout from '@/layout/baseLayout.astro'
+---
+
+<BaseLayout
+  title="BryanAG | Not Found"
+  lang="en"
+  description="I'm Bryan Alvarez, a programming enthusiast and aspiring Systems Engineer. I invite you to learn about my work and experience by exploring my portfolio."
+  keywords={['Not Found']}
+>
+  <section
+    class="p-2 w-full h-screen flex flex-col justify-center items-center text-center relative z-10"
+  >
+    <div>
+      <h1 class="font-[Poppins] text-3xl sm:text-5xl">Oops! Page not found</h1>
+      <a href="/en" class="underline inline-block mt-2">Return Home</a>
+    </div>
+    <HeroBackground client:idle />
+  </section>
+</BaseLayout>

@@ -38,7 +38,12 @@ const { title, lang, description, keywords } = Astro.props
     <link rel="canonical" href={Astro.url.href} />
     <meta name="theme-color" content="#171717" />
     <link rel="manifest" href="" />
-    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link
+      rel="sitemap"
+      type="application/xml"
+      title="Sitemap"
+      href="/sitemap-index.xml"
+    />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
