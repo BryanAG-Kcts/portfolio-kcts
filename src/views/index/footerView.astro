@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content'
-import Github from '@/assets/logos/github.svg'
+import GitHub from '@/assets/logos/github.svg'
 import Gmail from '@/assets/logos/gmail.svg'
 import Linkedin from '@/assets/logos/linkedin.svg'
 import { FooterCanvas } from '@/components/footer/footerCanvas'
@@ -27,7 +27,7 @@ const [footer] = await getCollection('footer', ({ slug }) => slug === lang)
           link="https://github.com/bryanag_kcts"
           title={footer.data.github}
         >
-          <Github class="size-full" />
+          <GitHub class="size-full" />
         </FooterCard>
         <FooterCard
           link="mailto:bryanag.kcts@gmail.com"

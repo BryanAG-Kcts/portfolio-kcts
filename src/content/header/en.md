@@ -1,5 +1,6 @@
 ---
 contact: Contact me
+themeLabel: Toggle theme
 sections:
   [
     { link: '#experience', name: Experience },

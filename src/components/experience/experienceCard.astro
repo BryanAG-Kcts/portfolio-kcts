@@ -9,7 +9,7 @@ const { title, time, responsibilities } = Astro.props
 ---
 
 <article class="flex flex-col gap-4 experience-card">
-  <h2 class="font-bold font-[Poppins] text-3xl">{title}</h2>
+  <h3 class="font-bold font-[Poppins] text-3xl">{title}</h3>
   <p>📅 {time}</p>
   <ul class="list-disc list-inside flex flex-col gap-5">
     {responsibilities.map((item) => <li>{item}</li>)}

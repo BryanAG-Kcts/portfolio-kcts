@@ -13,7 +13,8 @@ export function FooterCard({ children, link, title }: Props) {
       variant='outline'
       size='icon'
       title={title}
-      className='size-10 p-2'>
+      className='size-10 p-2'
+      aria-label={title}>
       <a
         aria-label={title}
         target='_blank'

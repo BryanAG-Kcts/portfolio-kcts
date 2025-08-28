@@ -22,7 +22,7 @@ const { title, image, description, skills } = Astro.props
       class="object-cover size-full rounded-xl dark:brightness-50"
     />
   </picture>
-  <h2 class="font-bold font-[Poppins] text-3xl">{title}</h2>
+  <h3 class="font-bold font-[Poppins] text-3xl">{title}</h3>
   <p>{description}</p>
   <div class="flex flex-wrap gap-2 mt-1">
     {skills.map((skill) => <Badge variant="secondary">{skill}</Badge>)}

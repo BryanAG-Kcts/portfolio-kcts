@@ -19,6 +19,7 @@ const header = defineCollection({
   type: 'content',
   schema: z.object({
     contact: z.string(),
+    themeLabel: z.string(),
     sections: z.array(
       z.object({
         link: z.string(),

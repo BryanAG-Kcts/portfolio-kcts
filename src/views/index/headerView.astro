@@ -34,11 +34,11 @@ const [header] = await getCollection('header', ({ slug }) => slug === lang)
   </nav>
 
   <div class="flex items-center gap-2">
-    <LinkButton href="#contact">
+    <LinkButton href="#contact" aria-label={header.data.contact}>
       {header.data.contact}
     </LinkButton>
 
-    <Theme client:idle />
+    <Theme themeLabel={header.data.themeLabel} client:idle />
   </div>
 </header>
 

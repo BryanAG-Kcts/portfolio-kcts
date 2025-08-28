@@ -1,5 +1,6 @@
 ---
 contact: Contáctame
+themeLabel: Cambiar tema
 sections:
   [
     { link: '#experience', name: Experiencia },

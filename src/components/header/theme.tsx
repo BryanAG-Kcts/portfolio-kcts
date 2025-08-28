@@ -3,7 +3,10 @@ import { useState } from 'react'
 import { toggleTheme } from '@/constants/toggleTheme'
 import { Button } from '../ui/button'
 
-export function Theme() {
+interface Props {
+  themeLabel: string
+}
+export function Theme({ themeLabel }: Props) {
   const [isDark, setIsDark] = useState(true)
   const Logo = isDark ? Moon : Sun
 
@@ -16,7 +19,8 @@ export function Theme() {
     <Button
       onClick={handleDark}
       variant='secondary'
-      className='cursor-pointer'>
+      className='cursor-pointer'
+      aria-label={themeLabel}>
       <Logo />
     </Button>
   )

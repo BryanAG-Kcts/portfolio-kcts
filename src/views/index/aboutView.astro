@@ -27,10 +27,14 @@ const { Content } = await about.render()
       >
         <Content />
         <div class="flex gap-4">
-          <LinkButton href={`/${lang}/cv.pdf`}>
+          <LinkButton href={`/${lang}/cv.pdf`} aria-label={about.data.cv}>
             {about.data.cv}
           </LinkButton>
-          <LinkButton href="#contact" variant="secondary">
+          <LinkButton
+            href="#contact"
+            variant="secondary"
+            aria-label={about.data.contact}
+          >
             {about.data.contact}
           </LinkButton>
         </div>
