@@ -5,6 +5,7 @@ import '@fontsource/quicksand'
 import '@fontsource/poppins/700'
 import '@fontsource/quicksand/700'
 import '@/styles/global.css'
+import StructuredData from '@/components/layout/structuredData.astro'
 
 interface Props {
   title: string
@@ -26,7 +27,7 @@ const { title, lang, description, keywords } = Astro.props
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords.join(', ')} />
-    <meta name="author" content="Kactuswow" />
+    <meta name="author" content="BryanAG-kcts" />
     <meta name="robots" content="index, follow" />
     <meta name="revisit-after" content="7 days" />
 
@@ -70,8 +71,11 @@ const { title, lang, description, keywords } = Astro.props
 
     <!-- Astro generator -->
     <meta name="generator" content={Astro.generator} />
+
+    <!-- Structured data -->
+    <StructuredData {...Astro.props} />
   </head>
   <body class="font-[Quicksand] dark">
     <slot />
-  </body>
-</html>
+  </body></html
+>

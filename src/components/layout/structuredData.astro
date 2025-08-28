@@ -1,0 +1,53 @@
+---
+import Favicon from '@/assets/favicon-dark.svg'
+import type { Languages } from '@/interfaces/i18n'
+interface Props {
+  title: string
+  lang: Languages
+  description: string
+  keywords: string[]
+}
+
+const { title, lang, description, keywords } = Astro.props
+---
+
+<script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": title,
+        "url": Astro.url.href,
+        "description": description,
+        "inLanguage": lang,
+        "publisher": {
+          "@type": "Organization",
+          "name": "BryanAG-kcts",
+          "logo": {
+            "@type": "ImageObject",
+            "url": Favicon.src
+          }
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": `${Astro.url.href}?s=${search_term_string}`,
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": title,
+        "url": Astro.url.href,
+        "description": description,
+        "inLanguage": lang,
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": Astro.url.href,
+          "name": title
+        },
+        "image": Favicon.src
+      }
+    </script>
