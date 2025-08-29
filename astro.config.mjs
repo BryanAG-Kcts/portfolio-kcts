@@ -8,7 +8,10 @@ import { defineConfig } from 'astro/config'
 export default defineConfig({
   site: 'https://portfolio-kcts.vercel.app',
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    build: {
+      sourcemap: true
+    }
   },
   integrations: [
     react(),
